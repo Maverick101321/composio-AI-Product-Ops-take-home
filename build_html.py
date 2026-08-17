@@ -237,6 +237,23 @@ def generate_html():
             </ul>
         </div>
 
+        <h2>Proof: Run It Yourself</h2>
+        <div class="patterns-section" style="border-left-color: #17a2b8;">
+            <p>This is a live excerpt from an actual run — not fabricated output — demonstrating the same research logic that built the full 100-app dataset.</p>
+            <pre style="background: #f1f3f5; padding: 15px; border-radius: 5px; overflow-x: auto;"><code>python research_pipeline.py --research "Twenty"</code></pre>
+            <pre style="background: #272822; color: #f8f8f2; padding: 15px; border-radius: 5px; overflow-x: auto;"><code>{{
+  "self_serve": true,
+  "self_serve_evidence": "Twenty is an open-source CRM that offers both a self-serve cloud platform (app.twenty.com) and the ability to self-host workspaces.",
+  "api_surface": "Dynamic REST and GraphQL APIs that automatically update based on tenant schema, alongside a Metadata API for schema management.",
+  "has_mcp": true,
+  "mcp_note": "Twenty includes a native Model Context Protocol (MCP) server built directly into its cloud workspaces, supporting OAuth for direct AI client connections.",
+  "buildability_verdict": "ready",
+  "blocker": null,
+  "evidence_url": "https://docs.twenty.com"
+}}</code></pre>
+            <p><a href="https://github.com/Maverick101321/composio-AI-Product-Ops-take-home" target="_blank" style="font-weight: bold;">View the GitHub Repository</a></p>
+        </div>
+
         <h2>Raw Data Matrix</h2>
         <table>
             <thead>

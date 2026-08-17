@@ -119,7 +119,10 @@ def research_app(app_name, hint_url):
         f"Research the {app_name} developer docs (starting at {hint_url}). "
         f"Return ONLY a JSON object matching this schema exactly: "
         f"self_serve (bool), self_serve_evidence (str), api_surface (str), "
-        f"has_mcp (bool), buildability_verdict (str), blocker (str or null), evidence_url (str)."
+        f"has_mcp (bool), mcp_note (str or null), buildability_verdict (must be exactly 'ready', 'blocked', or 'partial'), "
+        f"blocker (str or null), evidence_url (str). "
+        f"When checking has_mcp, search for both official and community/third-party MCP servers. "
+        f"If any exist, has_mcp is true, and detail it in mcp_note."
     )
     
     cmd = ["agy", "--print", prompt, "--output-format", "json"]

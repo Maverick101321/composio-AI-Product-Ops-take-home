@@ -1,0 +1,152 @@
+[
+  {
+    "app_name": "GoHighLevel",
+    "one_liner": "GoHighLevel is a comprehensive all-in-one marketing, CRM, and sales platform built specifically for marketing agencies and small businesses.",
+    "auth_methods": [
+      "OAuth 2.0",
+      "Private Integration Tokens (Bearer)"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can independently register applications on the GoHighLevel Developer Marketplace and instantly create Private Integration Tokens in their sub-accounts.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://marketplace.gohighlevel.com/docs/oauth"
+  },
+  {
+    "app_name": "Mailchimp",
+    "one_liner": "Mailchimp is an all-in-one marketing automation platform and email service for managing mailing lists and creating campaigns.",
+    "auth_methods": [
+      "API Key",
+      "OAuth 2.0"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Anyone can create a free Mailchimp account and generate an API key directly from their account settings without sales approval.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://mailchimp.com/developer/marketing/guides/quick-start/"
+  },
+  {
+    "app_name": "Klaviyo",
+    "one_liner": "Klaviyo is a marketing automation platform focused on email and SMS marketing, specifically tailored for e-commerce businesses.",
+    "auth_methods": [
+      "Private API Key",
+      "Public API Key",
+      "OAuth 2.0"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can instantly create a free test account to experiment with custom apps and integrations without risking production data.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://developers.klaviyo.com/en/docs/create_a_test_account"
+  },
+  {
+    "app_name": "Pinterest",
+    "one_liner": "Pinterest is a visual discovery engine for finding ideas like recipes, home and style inspiration, and managing visual bookmarks.",
+    "auth_methods": [
+      "OAuth 2.0"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can instantly register apps and obtain API credentials through the Pinterest developer portal for standard access.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://developers.pinterest.com/docs/getting-started/introduction/"
+  },
+  {
+    "app_name": "SendGrid",
+    "one_liner": "SendGrid is a cloud-based customer communication platform that delivers transactional and marketing emails at scale.",
+    "auth_methods": [
+      "API Key (Bearer Token)",
+      "SMTP Basic Auth"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Users can sign up for a free SendGrid tier and instantly generate API keys from the settings dashboard after enabling 2FA.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://docs.sendgrid.com/for-developers/sending-email/api-getting-started"
+  },
+  {
+    "app_name": "Shopify",
+    "one_liner": "Shopify is a complete commerce platform that lets you start, grow, and manage a business with online storefronts and POS systems.",
+    "auth_methods": [
+      "OAuth 2.0",
+      "Access Tokens",
+      "Session Tokens"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can join the Shopify Partner Program for free and instantly spin up development stores to build and test apps.",
+    "api_surface": "GraphQL",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://shopify.dev/docs/apps/getting-started/create"
+  },
+  {
+    "app_name": "Salesforce Commerce Cloud",
+    "one_liner": "Salesforce Commerce Cloud is an enterprise e-commerce platform for businesses to create seamless shopping experiences across B2C and B2B.",
+    "auth_methods": [
+      "OAuth 2.1",
+      "JWT Bearer Tokens"
+    ],
+    "self_serve": false,
+    "self_serve_evidence": "Access to Account Manager credentials and sandbox environments requires an enterprise contract or partner portal approval.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "blocked",
+    "blocker": "Requires enterprise contract or partner approval for sandbox access.",
+    "evidence_url": "https://developer.salesforce.com/docs/commerce/commerce-api/references/authorization"
+  },
+  {
+    "app_name": "Squarespace",
+    "one_liner": "Squarespace is a website building and hosting platform providing templates and tools for creating sites and online stores.",
+    "auth_methods": [
+      "API Key",
+      "OAuth 2.0"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can request free developer trials, and merchants with Advanced Commerce plans can self-generate API keys in settings.",
+    "api_surface": "REST - narrow",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://developers.squarespace.com/commerce-api/getting-started"
+  },
+  {
+    "app_name": "Gumroad",
+    "one_liner": "Gumroad is an e-commerce platform empowering creators to sell digital products, memberships, and physical goods directly to their audience.",
+    "auth_methods": [
+      "OAuth 2.0",
+      "Personal Access Token"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Anyone can create a free Gumroad account and instantly generate a Personal Access Token in the advanced settings tab.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://app.gumroad.com/api"
+  },
+  {
+    "app_name": "fanbasis",
+    "one_liner": "FanBasis provides a payment and financial orchestration infrastructure for integrating various BNPL and checkout options.",
+    "auth_methods": [
+      "API Key"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can access a free sandbox environment with simulated payment processors to test integrations securely.",
+    "api_surface": "REST - narrow",
+    "has_mcp": false,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://docs.fanbasis.com/api-reference"
+  }
+]

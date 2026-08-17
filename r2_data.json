@@ -1,0 +1,150 @@
+[
+  {
+    "app_name": "Plain",
+    "one_liner": "Plain is a B2B customer support and ticketing platform.",
+    "auth_methods": [
+      "API Key",
+      "OAuth 2.0 with PKCE"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can self-serve by creating a Machine User in their workspace settings to generate an API key.",
+    "api_surface": "GraphQL",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://www.plain.com/docs/graphql-api/authentication"
+  },
+  {
+    "app_name": "Help Scout",
+    "one_liner": "Help Scout is a customer support platform featuring shared mailboxes and live chat.",
+    "auth_methods": [
+      "OAuth 2.0"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can generate OAuth 2.0 App ID and Secret directly from the My Apps section in their Profile settings.",
+    "api_surface": "REST - broad",
+    "has_mcp": false,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://developer.helpscout.com/mailbox-api/overview/authentication/"
+  },
+  {
+    "app_name": "Gorgias",
+    "one_liner": "Gorgias is an ecommerce helpdesk and customer service platform built specifically for online stores.",
+    "auth_methods": [
+      "Basic Auth",
+      "OAuth 2.0"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Users can generate a REST API key directly from the REST API section under their account settings.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://developers.gorgias.com/reference/authentication"
+  },
+  {
+    "app_name": "Slack",
+    "one_liner": "Slack is a cloud-based team communication and collaboration platform.",
+    "auth_methods": [
+      "OAuth 2.0",
+      "Bot Token",
+      "User Token"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can create an app and generate tokens from the Slack API dashboard without admin approval for their own workspace.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://api.slack.com/authentication"
+  },
+  {
+    "app_name": "Discord",
+    "one_liner": "Discord is a voice, video and text chat app designed for communities and gamers.",
+    "auth_methods": [
+      "OAuth 2.0",
+      "Bot Token"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can instantly create a new application and generate bot tokens via the Discord Developer Portal.",
+    "api_surface": "REST - broad",
+    "has_mcp": false,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://discord.com/developers/docs/reference#authentication"
+  },
+  {
+    "app_name": "Telegram",
+    "one_liner": "Telegram is a globally accessible, encrypted, cloud-based centralized instant messaging service.",
+    "auth_methods": [
+      "Bot Token"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can create bots and get access tokens instantly by chatting with BotFather on Telegram.",
+    "api_surface": "REST - broad",
+    "has_mcp": false,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://core.telegram.org/bots/api#authorizing-your-bot"
+  },
+  {
+    "app_name": "WhatsApp Business",
+    "one_liner": "WhatsApp Business provides APIs for businesses to communicate with their customers at scale.",
+    "auth_methods": [
+      "OAuth 2.0",
+      "System User Token"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can use the Meta App Dashboard to add the WhatsApp product and generate temporary access tokens for testing.",
+    "api_surface": "REST - broad",
+    "has_mcp": false,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://developers.facebook.com/docs/whatsapp/cloud-api/get-started#access-tokens"
+  },
+  {
+    "app_name": "Google Ads",
+    "one_liner": "Google Ads API allows developers to programmatically manage and automate Google Ads accounts and campaigns.",
+    "auth_methods": [
+      "OAuth 2.0",
+      "Developer Token"
+    ],
+    "self_serve": false,
+    "self_serve_evidence": "API access requires applying for a developer token which must be manually reviewed and approved by Google.",
+    "api_surface": "REST - broad",
+    "has_mcp": false,
+    "buildability_verdict": "blocked",
+    "blocker": "Requires manual review and approval of the developer token by Google.",
+    "evidence_url": "https://developers.google.com/google-ads/api/docs/oauth/overview"
+  },
+  {
+    "app_name": "Meta Ads",
+    "one_liner": "Meta Ads API enables developers to programmatically manage Facebook and Instagram advertising campaigns.",
+    "auth_methods": [
+      "OAuth 2.0",
+      "System User Token"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can generate System User Access Tokens from the Business Manager settings without requiring external review for owned assets.",
+    "api_surface": "REST - broad",
+    "has_mcp": false,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://developers.facebook.com/docs/marketing-api/get-started/authorization"
+  },
+  {
+    "app_name": "LinkedIn Ads",
+    "one_liner": "LinkedIn Marketing Developer Platform allows programmatic management of LinkedIn ad campaigns and reporting.",
+    "auth_methods": [
+      "OAuth 2.0"
+    ],
+    "self_serve": false,
+    "self_serve_evidence": "API access requires submitting an application for the LinkedIn Marketing Developer Platform which must be approved by LinkedIn.",
+    "api_surface": "REST - broad",
+    "has_mcp": false,
+    "buildability_verdict": "blocked",
+    "blocker": "Requires approval for the LinkedIn Marketing Developer Program.",
+    "evidence_url": "https://learn.microsoft.com/en-us/linkedin/shared/authentication/authentication"
+  }
+]

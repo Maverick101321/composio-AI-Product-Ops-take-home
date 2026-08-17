@@ -1,0 +1,1954 @@
+[
+  {
+    "number": 1,
+    "name": "Salesforce",
+    "category": "CRM and Sales",
+    "website": "salesforce.com",
+    "one_liner": "Salesforce is a leading CRM platform integrating sales, service, marketing, and analytics to build customer relationships and drive business growth",
+    "auth_methods": [
+      "OAUTH2",
+      "S2S_OAUTH2"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can sign up for a permanently free Salesforce Developer Edition org to build and test API integrations.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_authorization.htm",
+    "source": "composio_catalog",
+    "composio_toolkit_slug": "salesforce"
+  },
+  {
+    "number": 2,
+    "name": "HubSpot",
+    "category": "CRM and Sales",
+    "website": "hubspot.com",
+    "one_liner": "HubSpot is an inbound marketing, sales, and customer service platform integrating CRM, email automation, and analytics to facilitate lead nurturing and seamless customer experiences",
+    "auth_methods": [
+      "OAUTH2",
+      "API_KEY"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can sign up for a free developer account and create test accounts to generate access tokens and OAuth credentials.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://developers.hubspot.com/docs/guides/apps/authentication/authentication-overview",
+    "source": "composio_catalog",
+    "composio_toolkit_slug": "hubspot"
+  },
+  {
+    "number": 3,
+    "name": "Pipedrive",
+    "category": "CRM and Sales",
+    "website": "pipedrive.com",
+    "one_liner": "Pipedrive is a sales management tool built around pipeline visualization, lead tracking, activity reminders, and automation to keep deals progressing",
+    "auth_methods": [
+      "OAUTH2",
+      "API_KEY"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Users can generate a Personal API Token from their settings or register an app in the Developer Hub for OAuth 2.0 without prior approval.",
+    "api_surface": "REST - broad",
+    "has_mcp": false,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://pipedrive.readme.io/docs/core-api-concepts-authentication",
+    "source": "composio_catalog",
+    "composio_toolkit_slug": "pipedrive"
+  },
+  {
+    "number": 4,
+    "name": "Attio",
+    "category": "CRM and Sales",
+    "website": "attio.com",
+    "one_liner": "Attio is a fully customizable workspace for your team's relationships and workflows.",
+    "auth_methods": [
+      "OAUTH2"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can generate an API key directly from their Workspace settings under Developers > Create a new integration.",
+    "api_surface": "REST - broad",
+    "has_mcp": false,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://docs.attio.com/docs/authentication",
+    "source": "composio_catalog",
+    "composio_toolkit_slug": "attio"
+  },
+  {
+    "number": 5,
+    "name": "Twenty",
+    "category": "CRM and Sales",
+    "website": "twenty.com",
+    "one_liner": "Twenty is an open-source CRM that allows users to manage contacts, opportunities, and activities natively in the cloud or self-hosted.",
+    "auth_methods": [
+      "API keys",
+      "Bearer token"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can generate a secret token directly from their instance's Settings > API & Webhooks under Developers.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://docs.twenty.com/developers/api/authentication",
+    "source": "manual_research",
+    "composio_toolkit_slug": null
+  },
+  {
+    "number": 6,
+    "name": "Podio",
+    "category": "CRM and Sales",
+    "website": "podio.com",
+    "one_liner": "Podio is a customizable work management and CRM platform that organizes team communication, business processes, and data.",
+    "auth_methods": [
+      "OAuth 2.0",
+      "App Token"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can register an application on Podio to receive a unique Client ID and Client Secret for OAuth 2.0 authentication.",
+    "api_surface": "REST - broad",
+    "has_mcp": false,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://developers.podio.com/authentication",
+    "source": "manual_research",
+    "composio_toolkit_slug": null
+  },
+  {
+    "number": 7,
+    "name": "Zoho CRM",
+    "category": "CRM and Sales",
+    "website": "zoho.com/crm",
+    "one_liner": "Zoho CRM is an online sales management software that manages sales, marketing, and support in a single system.",
+    "auth_methods": [
+      "OAuth 2.0"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can access the Zoho API Console to freely register a client and receive credentials.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://www.zoho.com/crm/developer/docs/api/v6/oauth-overview.html",
+    "source": "manual_research",
+    "composio_toolkit_slug": null
+  },
+  {
+    "number": 8,
+    "name": "Close",
+    "category": "CRM and Sales",
+    "website": "close.com",
+    "one_liner": "Close is a CRM platform designed to help businesses manage and streamline their sales processes, including calling, email automation, and predictive dialers.",
+    "auth_methods": [
+      "API_KEY"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Users can generate an API key in their Close account under Settings > Developer > API Keys.",
+    "api_surface": "REST - broad",
+    "has_mcp": false,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://developer.close.com/basics/authentication/",
+    "source": "composio_catalog",
+    "composio_toolkit_slug": "close"
+  },
+  {
+    "number": 9,
+    "name": "Copper",
+    "category": "CRM and Sales",
+    "website": "copper.com",
+    "one_liner": "Copper is a CRM tailored for Google Workspace users that helps manage leads, contacts, and sales pipelines.",
+    "auth_methods": [
+      "API keys",
+      "OAuth 2.0"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Users can generate an API Key directly from the Copper web app under Settings > Integrations > API Keys.",
+    "api_surface": "REST - broad",
+    "has_mcp": false,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://developer.copper.com/authentication.html",
+    "source": "manual_research",
+    "composio_toolkit_slug": null
+  },
+  {
+    "number": 10,
+    "name": "DealCloud",
+    "category": "CRM and Sales",
+    "website": "api.docs.dealcloud.com",
+    "one_liner": "DealCloud is a CRM and deal management platform designed specifically for financial services and investment banking.",
+    "auth_methods": [
+      "OAuth 2.0 Client Credentials"
+    ],
+    "self_serve": false,
+    "self_serve_evidence": "Intapp DealCloud does not offer a public self-service free trial; access requires an enterprise sandbox or client provisioned environment.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "blocked",
+    "blocker": "Requires enterprise client or partner approval, no self-serve developer access.",
+    "evidence_url": "https://developer.intapp.com/docs/dealcloud-api/authentication",
+    "source": "manual_research",
+    "composio_toolkit_slug": null
+  },
+  {
+    "number": 11,
+    "name": "Zendesk",
+    "category": "Support and Helpdesk",
+    "website": "zendesk.com",
+    "one_liner": "Zendesk provides customer support software with ticketing, live chat, and knowledge base features, enabling efficient helpdesk operations and customer engagement",
+    "auth_methods": [
+      "OAUTH2"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Zendesk offers a 14-day self-serve free trial and permanent Sponsored Developer Accounts for testing.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/",
+    "source": "composio_catalog",
+    "composio_toolkit_slug": "zendesk"
+  },
+  {
+    "number": 12,
+    "name": "Intercom",
+    "category": "Support and Helpdesk",
+    "website": "intercom.com",
+    "one_liner": "Intercom provides live chat, messaging, and customer engagement tools, enabling businesses to drive conversions, handle support, and personalize communication at scale",
+    "auth_methods": [
+      "OAUTH2"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can sign up for a free developer workspace to build and test private or public apps without a paid subscription.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://developers.intercom.com/docs/build-an-integration/learn-more/authentication/",
+    "source": "composio_catalog",
+    "composio_toolkit_slug": "intercom"
+  },
+  {
+    "number": 13,
+    "name": "Freshdesk",
+    "category": "Support and Helpdesk",
+    "website": "freshdesk.com",
+    "one_liner": "Freshdesk provides customer support software with ticketing, knowledge base, and automation features for efficient helpdesk operations and better customer experiences",
+    "auth_methods": [
+      "API_KEY"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can sign up for a free Freshdesk account (like the free Sprout plan) to get an API key.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://developers.freshdesk.com/api/#authentication",
+    "source": "composio_catalog",
+    "composio_toolkit_slug": "freshdesk"
+  },
+  {
+    "number": 14,
+    "name": "Front",
+    "category": "Support and Helpdesk",
+    "website": "front.com",
+    "one_liner": "Front is a customer operations platform that functions as a shared inbox and helpdesk CRM for teams.",
+    "auth_methods": [
+      "Bearer Token",
+      "OAuth 2.0"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can create API tokens under Settings > Developers > API Tokens, or register an OAuth app in the Front Developer Center.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://dev.frontapp.com/docs/authentication-1",
+    "source": "manual_research",
+    "composio_toolkit_slug": null
+  },
+  {
+    "number": 15,
+    "name": "Pylon",
+    "category": "Support and Helpdesk",
+    "website": "usepylon.com",
+    "one_liner": "Pylon is an AI-native B2B customer support platform that unifies ticketing, chat, knowledge base, and account intelligence across channels like Slack Connect, Microsoft Teams, email, and in-app chat.",
+    "auth_methods": [
+      "DCR_OAUTH"
+    ],
+    "self_serve": false,
+    "self_serve_evidence": "Pylon does not offer a public self-serve sign up; access requires contacting sales and a paid plan.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "blocked",
+    "blocker": "No self-serve sign-up; requires a sales conversation to get access.",
+    "evidence_url": "https://usepylon.com/docs/api",
+    "source": "composio_catalog",
+    "composio_toolkit_slug": "pylon_mcp"
+  },
+  {
+    "number": 16,
+    "name": "LiveAgent",
+    "category": "Support and Helpdesk",
+    "website": "liveagent.com",
+    "one_liner": "LiveAgent is a helpdesk and ticketing system that helps businesses provide multichannel customer support.",
+    "auth_methods": [
+      "API Key"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can generate an API Key directly from the LiveAgent panel under Configuration > System > API.",
+    "api_surface": "REST - broad",
+    "has_mcp": false,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://support.liveagent.com/840770-Complete-API-reference",
+    "source": "manual_research",
+    "composio_toolkit_slug": null
+  },
+  {
+    "number": 17,
+    "name": "Plain",
+    "category": "Support and Helpdesk",
+    "website": "plain.com",
+    "one_liner": "Plain is a collaborative support platform for B2B support teams, offering a modern, AI-powered interface to consolidate support channels and assist customers efficiently.",
+    "auth_methods": [
+      "API_KEY"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can self-serve by creating a Machine User in their workspace settings to generate an API key.",
+    "api_surface": "GraphQL",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://www.plain.com/docs/graphql-api/authentication",
+    "source": "composio_catalog",
+    "composio_toolkit_slug": "plain"
+  },
+  {
+    "number": 18,
+    "name": "Help Scout",
+    "category": "Support and Helpdesk",
+    "website": "helpscout.com",
+    "one_liner": "Help Scout provides customer support software with shared inbox, knowledge base, and customer management tools",
+    "auth_methods": [
+      "OAUTH2"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can generate OAuth 2.0 App ID and Secret directly from the My Apps section in their Profile settings.",
+    "api_surface": "REST - broad",
+    "has_mcp": false,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://developer.helpscout.com/mailbox-api/overview/authentication/",
+    "source": "composio_catalog",
+    "composio_toolkit_slug": "help_scout"
+  },
+  {
+    "number": 19,
+    "name": "Gorgias",
+    "category": "Support and Helpdesk",
+    "website": "gorgias.com",
+    "one_liner": "Gorgias is a helpdesk and live chat platform specializing in e-commerce, offering automated support, order management, and unified customer communication",
+    "auth_methods": [
+      "API_KEY",
+      "OAUTH2"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Users can generate a REST API key directly from the REST API section under their account settings.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://developers.gorgias.com/reference/authentication",
+    "source": "composio_catalog",
+    "composio_toolkit_slug": "gorgias"
+  },
+  {
+    "number": 20,
+    "name": "Gladly",
+    "category": "Support and Helpdesk",
+    "website": "gladly.com",
+    "one_liner": "Gladly is a radically personal customer service platform centered around people, not tickets.",
+    "auth_methods": [
+      "Basic Authentication"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Users with API permissions can generate an API Token from their settings and use it as a password for Basic Auth.",
+    "api_surface": "REST - broad",
+    "has_mcp": false,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://developer.gladly.com/rest/",
+    "source": "manual_research",
+    "composio_toolkit_slug": null
+  },
+  {
+    "number": 21,
+    "name": "Slack",
+    "category": "Communications and Messaging",
+    "website": "slack.com",
+    "one_liner": "Slack is a channel-based messaging platform. With Slack, people can work together more effectively, connect all their software tools and services, and find the information they need to do their best work - all within a secure, enterprise-grade environment.",
+    "auth_methods": [
+      "OAUTH2"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can create an app and generate tokens from the Slack API dashboard without admin approval for their own workspace.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://api.slack.com/authentication",
+    "source": "composio_catalog",
+    "composio_toolkit_slug": "slack"
+  },
+  {
+    "number": 22,
+    "name": "Twilio",
+    "category": "Communications and Messaging",
+    "website": "twilio.com",
+    "one_liner": "Twilio is a cloud communications platform that enables developers to build voice, video, and messaging applications.",
+    "auth_methods": [
+      "Basic Authentication",
+      "API Keys"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can sign up for a free Twilio account and immediately generate API keys or use their account SID and Auth Token.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://www.twilio.com/docs/usage/security",
+    "source": "manual_research",
+    "composio_toolkit_slug": null
+  },
+  {
+    "number": 23,
+    "name": "Zoho Cliq",
+    "category": "Communications and Messaging",
+    "website": "zoho.com/cliq",
+    "one_liner": "Zoho Cliq is a team communication and collaboration software that integrates with other Zoho apps and third-party tools.",
+    "auth_methods": [
+      "OAuth 2.0"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can freely access the Zoho API Console to register a client and receive OAuth credentials.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://www.zoho.com/cliq/help/restapi/authentication.html",
+    "source": "manual_research",
+    "composio_toolkit_slug": null
+  },
+  {
+    "number": 24,
+    "name": "Lark (Larksuite)",
+    "category": "Communications and Messaging",
+    "website": "open.larksuite.com",
+    "one_liner": "An all-in-one enterprise collaboration platform offering messaging, docs, and calendar.",
+    "auth_methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can register an application in the Lark Developer Console to obtain app credentials for free.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://open.larksuite.com/document/server-docs/getting-started/api-overview",
+    "source": "manual_research",
+    "composio_toolkit_slug": null
+  },
+  {
+    "number": 25,
+    "name": "Pumble",
+    "category": "Communications and Messaging",
+    "website": "pumble.com",
+    "one_liner": "A team communication and collaboration app offering chat and messaging features.",
+    "auth_methods": [
+      "API Key"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Users can generate API keys directly inside the chat interface using a slash command or in the workspace settings.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://pumble.com/help/api/",
+    "source": "manual_research",
+    "composio_toolkit_slug": null
+  },
+  {
+    "number": 26,
+    "name": "Discord",
+    "category": "Communications and Messaging",
+    "website": "discord.com",
+    "one_liner": "An instant messaging and VoIP social platform.",
+    "auth_methods": [
+      "OAUTH2"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can instantly create a new bot application and generate tokens via the Discord Developer Portal.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://discord.com/developers/docs/topics/oauth2",
+    "source": "composio_catalog",
+    "composio_toolkit_slug": "discord"
+  },
+  {
+    "number": 27,
+    "name": "Telegram",
+    "category": "Communications and Messaging",
+    "website": "core.telegram.org",
+    "one_liner": "Telegram is a cloud-based messaging app with a focus on security and speed. Build bots to send messages, manage chats, and interact with users.",
+    "auth_methods": [
+      "API_KEY"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can instantly create bots and get access tokens by chatting with BotFather on Telegram.",
+    "api_surface": "REST - broad",
+    "has_mcp": false,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://core.telegram.org/bots/api#authorizing-your-bot",
+    "source": "composio_catalog",
+    "composio_toolkit_slug": "telegram"
+  },
+  {
+    "number": 28,
+    "name": "WhatsApp Business",
+    "category": "Communications and Messaging",
+    "website": "developers.facebook.com/docs/whatsapp",
+    "one_liner": "Enables interaction with customers through the WhatsApp Business API for messaging and automation. Only supports WhatsApp Business accounts, not WhatsApp Personal accounts.",
+    "auth_methods": [
+      "OAUTH2",
+      "API_KEY"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can instantly generate temporary access tokens in the Meta for Developers App Dashboard.",
+    "api_surface": "REST - broad",
+    "has_mcp": false,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://developers.facebook.com/docs/whatsapp/cloud-api/get-started",
+    "source": "composio_catalog",
+    "composio_toolkit_slug": "whatsapp"
+  },
+  {
+    "number": 29,
+    "name": "Aircall",
+    "category": "Communications and Messaging",
+    "website": "aircall.io",
+    "one_liner": "A cloud-based business phone system and call center software.",
+    "auth_methods": [
+      "Basic",
+      "OAuth2"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Customers can easily generate API keys directly from their Aircall dashboard for internal use.",
+    "api_surface": "REST - broad",
+    "has_mcp": false,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://developer.aircall.io/api-references/#authentication",
+    "source": "manual_research",
+    "composio_toolkit_slug": null
+  },
+  {
+    "number": 30,
+    "name": "Vonage",
+    "category": "Communications and Messaging",
+    "website": "developer.vonage.com",
+    "one_liner": "A cloud communications platform providing voice, messaging, and video APIs.",
+    "auth_methods": [
+      "JWT",
+      "Basic",
+      "API Key"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can sign up and create an application in the Vonage Dashboard to get credentials.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+    "source": "manual_research",
+    "composio_toolkit_slug": null
+  },
+  {
+    "number": 31,
+    "name": "Google Ads",
+    "category": "Marketing, Ads, Email and Social",
+    "website": "developers.google.com/google-ads",
+    "one_liner": "Google Ads, is an online advertising platform developed by Google, where advertisers bid to display brief advertisements, service offerings, product listings, and videos to web users.",
+    "auth_methods": [
+      "OAUTH2"
+    ],
+    "self_serve": false,
+    "self_serve_evidence": "API access requires applying for a developer token which must be manually reviewed and approved by Google.",
+    "api_surface": "REST - broad",
+    "has_mcp": false,
+    "buildability_verdict": "partial",
+    "blocker": "Developer token needs Google approval for production access; an auto-approved 'Explorer' tier allows immediate self-serve access to test accounts only.",
+    "evidence_url": "https://developers.google.com/google-ads/api/docs/oauth/overview",
+    "source": "composio_catalog",
+    "composio_toolkit_slug": "googleads"
+  },
+  {
+    "number": 32,
+    "name": "Meta Ads",
+    "category": "Marketing, Ads, Email and Social",
+    "website": "developers.facebook.com/docs/marketing-apis",
+    "one_liner": "Create, edit and get insights from ads across Meta technologies, including Facebook, Instagram, Messenger, WhatsApp and more.",
+    "auth_methods": [
+      "OAUTH2",
+      "API_KEY"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can generate System User Access Tokens from the Business Manager settings for server-to-server interactions.",
+    "api_surface": "REST - broad",
+    "has_mcp": false,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://developers.facebook.com/docs/marketing-api/authentication",
+    "source": "composio_catalog",
+    "composio_toolkit_slug": "metaads"
+  },
+  {
+    "number": 33,
+    "name": "LinkedIn Ads",
+    "category": "Marketing, Ads, Email and Social",
+    "website": "learn.microsoft.com/linkedin/marketing",
+    "one_liner": "LinkedIn Marketing and Advertising API for managing ad campaigns, analytics, and organization social content",
+    "auth_methods": [
+      "OAUTH2"
+    ],
+    "self_serve": false,
+    "self_serve_evidence": "API access requires submitting an application for the LinkedIn Marketing Developer Platform which must be approved by LinkedIn.",
+    "api_surface": "REST - broad",
+    "has_mcp": false,
+    "buildability_verdict": "blocked",
+    "blocker": "Requires approval for the LinkedIn Marketing Developer Program.",
+    "evidence_url": "https://learn.microsoft.com/en-us/linkedin/marketing/",
+    "source": "composio_catalog",
+    "composio_toolkit_slug": "linkedin_ads"
+  },
+  {
+    "number": 34,
+    "name": "GoHighLevel",
+    "category": "Marketing, Ads, Email and Social",
+    "website": "highlevel.stoplight.io",
+    "one_liner": "HighLevel provides a marketing automation and CRM platform for agencies, featuring funnels, appointment scheduling, two-way texting, and other tools to drive client success",
+    "auth_methods": [
+      "OAUTH2"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can generate Private Integration Tokens directly inside a GoHighLevel Sub-Account or Agency settings.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://developers.gohighlevel.com/docs/authentication",
+    "source": "composio_catalog",
+    "composio_toolkit_slug": "highlevel"
+  },
+  {
+    "number": 35,
+    "name": "Mailchimp",
+    "category": "Marketing, Ads, Email and Social",
+    "website": "mailchimp.com/developer",
+    "one_liner": "Mailchimp is an email marketing and automation platform providing campaign templates, audience segmentation, and performance analytics to drive engagement and conversions",
+    "auth_methods": [
+      "OAUTH2"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "You can generate an API key instantly from your Mailchimp account dashboard for private scripts.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://mailchimp.com/developer/marketing/docs/fundamentals/",
+    "source": "composio_catalog",
+    "composio_toolkit_slug": "mailchimp",
+    "mcp_note": "Community/third-party MCP servers exist (Pipedream, Zapier, StackOne); no official server from Mailchimp/Intuit."
+  },
+  {
+    "number": 36,
+    "name": "Klaviyo",
+    "category": "Marketing, Ads, Email and Social",
+    "website": "developers.klaviyo.com",
+    "one_liner": "Klaviyo is a data-driven email and SMS marketing platform that allows e-commerce brands to deliver targeted messages, track conversions, and scale customer relationships",
+    "auth_methods": [
+      "API_KEY",
+      "OAUTH2"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can instantly create a free test account to experiment with custom apps and integrations without risking production data.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://developers.klaviyo.com/en/docs/create_a_test_account",
+    "source": "composio_catalog",
+    "composio_toolkit_slug": "klaviyo"
+  },
+  {
+    "number": 37,
+    "name": "systeme.io",
+    "category": "Marketing, Ads, Email and Social",
+    "website": "systeme.io",
+    "one_liner": "An all-in-one marketing platform for building sales funnels, sending emails, and managing online courses.",
+    "auth_methods": [
+      "API Key"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Users can generate a Public API token directly from their Systeme.io account settings.",
+    "api_surface": "REST - broad",
+    "has_mcp": false,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://systeme.io/help/articles/11099688-how-to-generate-an-api-key",
+    "source": "manual_research",
+    "composio_toolkit_slug": null
+  },
+  {
+    "number": 38,
+    "name": "Pinterest",
+    "category": "Marketing, Ads, Email and Social",
+    "website": "developers.pinterest.com",
+    "one_liner": "Pinterest is a visual discovery platform for finding ideas like recipes, home and style inspiration, and more.",
+    "auth_methods": [
+      "OAUTH2"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can instantly register apps and obtain API credentials through the Pinterest developer portal for standard access.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://developers.pinterest.com/docs/getting-started/introduction/",
+    "source": "composio_catalog",
+    "composio_toolkit_slug": "pinterest"
+  },
+  {
+    "number": 39,
+    "name": "Threads (Meta)",
+    "category": "Marketing, Ads, Email and Social",
+    "website": "developers.facebook.com/docs/threads",
+    "one_liner": "A text-based social media platform created by Meta.",
+    "auth_methods": [
+      "OAuth2"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can create an app in the Meta Developer dashboard to test with their own account, though public access requires App Review.",
+    "api_surface": "REST - narrow",
+    "has_mcp": false,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://developers.facebook.com/docs/threads/overview",
+    "source": "manual_research",
+    "composio_toolkit_slug": null
+  },
+  {
+    "number": 40,
+    "name": "SendGrid",
+    "category": "Marketing, Ads, Email and Social",
+    "website": "sendgrid.com",
+    "one_liner": "SendGrid is a cloud-based email delivery platform providing transactional and marketing email services, with APIs for integration, analytics, and scalability",
+    "auth_methods": [
+      "API_KEY"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Users can sign up for a free SendGrid tier and instantly generate API keys from the settings dashboard after enabling 2FA.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://docs.sendgrid.com/for-developers/sending-email/api-getting-started",
+    "source": "composio_catalog",
+    "composio_toolkit_slug": "sendgrid"
+  },
+  {
+    "number": 41,
+    "name": "Shopify",
+    "category": "Ecommerce",
+    "website": "shopify.dev",
+    "one_liner": "Shopify is an e-commerce platform. This toolkit is GraphQL-first for new Admin API automations while retaining legacy REST compatibility actions for older workflows and numeric-ID interoperability",
+    "auth_methods": [
+      "API_KEY",
+      "OAUTH2",
+      "S2S_OAUTH2"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can join the Shopify Partner Program for free and instantly spin up development stores to build and test apps.",
+    "api_surface": "GraphQL",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://shopify.dev/docs/apps/getting-started/create",
+    "source": "composio_catalog",
+    "composio_toolkit_slug": "shopify"
+  },
+  {
+    "number": 42,
+    "name": "WooCommerce",
+    "category": "Ecommerce",
+    "website": "woocommerce.com/document/woocommerce-rest-api",
+    "one_liner": "An open-source e-commerce plugin built for WordPress.",
+    "auth_methods": [
+      "Basic",
+      "OAuth 1.0a"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can generate a Consumer Key and Consumer Secret directly from the WooCommerce admin dashboard.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://woocommerce.com/document/woocommerce-rest-api/",
+    "source": "manual_research",
+    "composio_toolkit_slug": null
+  },
+  {
+    "number": 43,
+    "name": "BigCommerce",
+    "category": "Ecommerce",
+    "website": "developer.bigcommerce.com",
+    "one_liner": "A versatile e-commerce platform for creating and managing online stores.",
+    "auth_methods": [
+      "OAuth2",
+      "API Token",
+      "JWT"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can generate API credentials from the BigCommerce Control Panel for custom integrations.",
+    "api_surface": "REST - broad",
+    "has_mcp": false,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://developer.bigcommerce.com/api-docs/getting-started/authentication",
+    "source": "manual_research",
+    "composio_toolkit_slug": null
+  },
+  {
+    "number": 44,
+    "name": "Salesforce Commerce Cloud",
+    "category": "Ecommerce",
+    "website": "developer.salesforce.com/docs/commerce",
+    "one_liner": "Salesforce is a leading CRM platform integrating sales, service, marketing, and analytics to build customer relationships and drive business growth",
+    "auth_methods": [
+      "OAUTH2",
+      "S2S_OAUTH2"
+    ],
+    "self_serve": false,
+    "self_serve_evidence": "Access to Account Manager credentials and sandbox environments requires an enterprise contract or partner portal approval.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "blocked",
+    "blocker": "Requires enterprise contract or partner approval for sandbox access.",
+    "evidence_url": "https://developer.salesforce.com/docs/commerce/commerce-api/references/authorization",
+    "source": "composio_catalog",
+    "composio_toolkit_slug": "salesforce"
+  },
+  {
+    "number": 45,
+    "name": "Magento (Adobe Commerce)",
+    "category": "Ecommerce",
+    "website": "developer.adobe.com/commerce",
+    "one_liner": "A flexible and scalable e-commerce platform for B2B and B2C businesses.",
+    "auth_methods": [
+      "Bearer Token",
+      "OAuth 1.0a"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Admins can generate integration tokens directly from the Magento Admin panel.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://developer.adobe.com/commerce/webapi/rest/authentication/",
+    "source": "manual_research",
+    "composio_toolkit_slug": null
+  },
+  {
+    "number": 46,
+    "name": "Squarespace",
+    "category": "Ecommerce",
+    "website": "developers.squarespace.com",
+    "one_liner": "Square provides payment processing, POS systems, invoicing, and e-commerce tools, enabling sellers to accept card payments and manage their business",
+    "auth_methods": [
+      "OAUTH2"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can request free developer trials, and merchants with Advanced Commerce plans can self-generate API keys in settings.",
+    "api_surface": "REST - narrow",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://developers.squarespace.com/commerce-api/getting-started",
+    "source": "composio_catalog",
+    "composio_toolkit_slug": "square"
+  },
+  {
+    "number": 47,
+    "name": "Ecwid",
+    "category": "Ecommerce",
+    "website": "api-docs.ecwid.com",
+    "one_liner": "An e-commerce platform that allows users to add online stores to existing websites.",
+    "auth_methods": [
+      "OAuth2",
+      "API Token"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Merchants can generate secret tokens for REST API access by creating a Custom App in the Ecwid Admin Panel.",
+    "api_surface": "REST - broad",
+    "has_mcp": false,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://api-docs.ecwid.com/reference/rest-api-overview",
+    "source": "manual_research",
+    "composio_toolkit_slug": null
+  },
+  {
+    "number": 48,
+    "name": "Gumroad",
+    "category": "Ecommerce",
+    "website": "gumroad.com/api",
+    "one_liner": "Gumroad simplifies selling digital goods, physical products, and memberships by offering a streamlined checkout, marketing tools, and direct payout options",
+    "auth_methods": [
+      "OAUTH2"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Anyone can create a free Gumroad account and instantly generate a Personal Access Token in the advanced settings tab.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://app.gumroad.com/api",
+    "source": "composio_catalog",
+    "composio_toolkit_slug": "gumroad"
+  },
+  {
+    "number": 49,
+    "name": "Amazon Selling Partner",
+    "category": "Ecommerce",
+    "website": "developer-docs.amazon.com/sp-api",
+    "one_liner": "The Amazon Selling Partner API allows developers to build applications that programmatically access Amazon listings, orders, and fulfillment data.",
+    "auth_methods": [
+      "OAuth2"
+    ],
+    "self_serve": false,
+    "self_serve_evidence": "Registering as a developer requires an active Professional Selling Account ($39.99/mo) and identity verification.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "blocked",
+    "blocker": "paid plan required",
+    "evidence_url": "https://developer-docs.amazon.com/sp-api/docs/authorizing-selling-partner-api-applications",
+    "source": "manual_research",
+    "composio_toolkit_slug": null
+  },
+  {
+    "number": 50,
+    "name": "fanbasis",
+    "category": "Ecommerce",
+    "website": "fanbasis.com",
+    "one_liner": "Fanbasis provides developer infrastructure and APIs for creator economy tools, multi-processor payment orchestration, and alternative payment rails.",
+    "auth_methods": [
+      "API key"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can access a free sandbox environment with simulated payment processors to test integrations securely.",
+    "api_surface": "REST - narrow",
+    "has_mcp": false,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://docs.fanbasis.com/api-reference",
+    "source": "manual_research",
+    "composio_toolkit_slug": null
+  },
+  {
+    "number": 51,
+    "name": "DataForSEO",
+    "category": "Data, SEO and Scraping",
+    "website": "docs.dataforseo.com",
+    "one_liner": "SEO data and analytics platform providing SERP data, backlinks, keywords, and competitive intelligence",
+    "auth_methods": [
+      "BASIC"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can sign up for a DataForSEO account and immediately obtain API credentials from the dashboard.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://docs.dataforseo.com/v3/appendix/authentication/",
+    "source": "composio_catalog",
+    "composio_toolkit_slug": "dataforseo"
+  },
+  {
+    "number": 52,
+    "name": "SE Ranking",
+    "category": "Data, SEO and Scraping",
+    "website": "seranking.com/api",
+    "one_liner": "SE Ranking provides an API to programmatically access SEO data including keyword rank tracking, website audits, and competitor research.",
+    "auth_methods": [
+      "API key"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can sign up for a 14-day free trial and generate an API key directly from their account settings.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://seranking.com/api.html",
+    "source": "manual_research",
+    "composio_toolkit_slug": null
+  },
+  {
+    "number": 53,
+    "name": "Ahrefs",
+    "category": "Data, SEO and Scraping",
+    "website": "ahrefs.com/api",
+    "one_liner": "Ahrefs is an SEO and marketing platform offering site audits, keyword research, content analysis, and competitive insights to improve search rankings and drive organic traffic",
+    "auth_methods": [
+      "API_KEY"
+    ],
+    "self_serve": false,
+    "self_serve_evidence": "API access requires an Enterprise plan and must be managed by a workspace owner or administrator.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "blocked",
+    "blocker": "Requires an Enterprise plan for API access.",
+    "evidence_url": "https://docs.ahrefs.com/en/api/docs/introduction",
+    "source": "composio_catalog",
+    "composio_toolkit_slug": "ahrefs"
+  },
+  {
+    "number": 54,
+    "name": "MrScraper",
+    "category": "Data, SEO and Scraping",
+    "website": "docs.mrscraper.com",
+    "one_liner": "MrScraper provides web scraping APIs for structured extraction, search results, marketplace data, travel data, and web unblocking.",
+    "auth_methods": [
+      "API_KEY"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can instantly generate an API token from their MrScraper account dashboard.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://mrscraper.com/docs/api",
+    "source": "composio_catalog",
+    "composio_toolkit_slug": "mrscraper"
+  },
+  {
+    "number": 55,
+    "name": "Apify",
+    "category": "Data, SEO and Scraping",
+    "website": "docs.apify.com",
+    "one_liner": "Apify is a platform for building, deploying, and managing web scraping and automation tools, known as Actors.",
+    "auth_methods": [
+      "API_KEY"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can generate secret API tokens instantly from the Apify Console under Settings.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://docs.apify.com/api/v2",
+    "source": "composio_catalog",
+    "composio_toolkit_slug": "apify"
+  },
+  {
+    "number": 56,
+    "name": "Firecrawl",
+    "category": "Data, SEO and Scraping",
+    "website": "firecrawl.dev",
+    "one_liner": "Firecrawl automates web crawling and data extraction, enabling organizations to gather content, index sites, and gain insights from online sources at scale",
+    "auth_methods": [
+      "API_KEY"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can obtain a standard API key directly from their Firecrawl account dashboard.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://docs.firecrawl.dev/api-reference",
+    "source": "composio_catalog",
+    "composio_toolkit_slug": "firecrawl"
+  },
+  {
+    "number": 57,
+    "name": "Bright Data",
+    "category": "Data, SEO and Scraping",
+    "website": "brightdata.com",
+    "one_liner": "Bright Data provides the world's #1 web data platform with Web Unlocker for bypassing anti-bot systems, SERP API for search engine data, and pre-made scrapers for popular websites. Collect any web data at scale.",
+    "auth_methods": [
+      "API_KEY"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can log in to the Bright Data Dashboard and instantly generate an API Token.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://docs.brightdata.com/api-reference/",
+    "source": "composio_catalog",
+    "composio_toolkit_slug": "brightdata"
+  },
+  {
+    "number": 58,
+    "name": "Sherlock",
+    "category": "Data, SEO and Scraping",
+    "website": "github.com/sherlock-project/sherlock",
+    "one_liner": "Sherlock is an open-source command-line tool used to hunt down social media accounts by username across various networks.",
+    "auth_methods": [
+      "none - local CLI tool"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "It is a free, open-source tool available for anyone to clone and use from GitHub.",
+    "api_surface": "no public API",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://github.com/sherlock-project/sherlock",
+    "source": "manual_research",
+    "composio_toolkit_slug": null
+  },
+  {
+    "number": 59,
+    "name": "Waterfall.io",
+    "category": "Data, SEO and Scraping",
+    "website": "waterfall.io",
+    "one_liner": "Waterfall.io provides a Go-to-Market API that aggregates over 30 data vendors for B2B data enrichment and prospecting.",
+    "auth_methods": [
+      "API key"
+    ],
+    "self_serve": false,
+    "self_serve_evidence": "Testing the API requires booking a demo or call with their team rather than an automated self-serve signup.",
+    "api_surface": "REST - narrow",
+    "has_mcp": false,
+    "buildability_verdict": "blocked",
+    "blocker": "requires sales contact",
+    "evidence_url": "https://docs.waterfall.io/api-reference",
+    "source": "manual_research",
+    "composio_toolkit_slug": null
+  },
+  {
+    "number": 60,
+    "name": "Clay",
+    "category": "Data, SEO and Scraping",
+    "website": "clay.com",
+    "one_liner": "Clay is a data enrichment and automation platform that aggregates multiple data providers to build automated GTM workflows.",
+    "auth_methods": [
+      "API key"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Users can sign up for a free tier and manage their personal API key directly from their workspace settings.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://clay.com/developer",
+    "source": "manual_research",
+    "composio_toolkit_slug": null
+  },
+  {
+    "number": 61,
+    "name": "GitHub",
+    "category": "Developer, Infra and Data platforms",
+    "website": "docs.github.com/rest",
+    "one_liner": "GitHub is a code hosting platform for version control and collaboration, offering Git-based repository management, issue tracking, and continuous integration features",
+    "auth_methods": [
+      "OAUTH2"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can easily generate Personal Access Tokens (PATs) or register GitHub Apps instantly via their account settings.",
+    "api_surface": "REST - broad, GraphQL",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://docs.github.com/en/rest/authentication/about-authentication",
+    "source": "composio_catalog",
+    "composio_toolkit_slug": "github"
+  },
+  {
+    "number": 62,
+    "name": "Vercel",
+    "category": "Developer, Infra and Data platforms",
+    "website": "vercel.com/docs/rest-api",
+    "one_liner": "Vercel is a platform for frontend frameworks and static sites, enabling developers to host websites and web services that deploy instantly, scale automatically, and require minimal configuration.",
+    "auth_methods": [
+      "API_KEY"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can instantly create a Vercel Access Token from their personal account settings.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://vercel.com/docs/rest-api",
+    "source": "composio_catalog",
+    "composio_toolkit_slug": "vercel"
+  },
+  {
+    "number": 63,
+    "name": "Netlify",
+    "category": "Developer, Infra and Data platforms",
+    "website": "docs.netlify.com/api",
+    "one_liner": "Netlify provides a platform for deploying, scaling, and managing modern web applications and frontend infrastructure.",
+    "auth_methods": [
+      "OAuth2",
+      "Personal Access Token"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can sign up for free and generate Personal Access Tokens directly from their Netlify User Settings.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://docs.netlify.com/api/get-started/",
+    "source": "manual_research",
+    "composio_toolkit_slug": null
+  },
+  {
+    "number": 64,
+    "name": "Cloudflare",
+    "category": "Developer, Infra and Data platforms",
+    "website": "developers.cloudflare.com/api",
+    "one_liner": "Cloudflare is a global network designed to make everything you connect to the Internet secure, private, fast, and reliable.",
+    "auth_methods": [
+      "API_KEY"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can create scoped API tokens instantly from their Cloudflare dashboard profile.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://developers.cloudflare.com/fundamentals/api/get-started/create-token/",
+    "source": "composio_catalog",
+    "composio_toolkit_slug": "cloudflare"
+  },
+  {
+    "number": 65,
+    "name": "Supabase",
+    "category": "Developer, Infra and Data platforms",
+    "website": "supabase.com/docs",
+    "one_liner": "Supabase is an open-source backend-as-a-service providing a Postgres database, authentication, storage, and real-time subscription APIs for building modern applications",
+    "auth_methods": [
+      "OAUTH2",
+      "API_KEY"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can instantly create an account and generate Personal Access Tokens (PATs) for programmatic access.",
+    "api_surface": "REST - broad, GraphQL",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://supabase.com/docs/reference/api/introduction",
+    "source": "composio_catalog",
+    "composio_toolkit_slug": "supabase"
+  },
+  {
+    "number": 66,
+    "name": "Neo4j",
+    "category": "Developer, Infra and Data platforms",
+    "website": "neo4j.com/docs/api",
+    "one_liner": "Graph database platform for connected data and real-time analytics",
+    "auth_methods": [
+      "OAUTH2",
+      "BASIC",
+      "API_KEY",
+      "S2S_OAUTH2"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can spin up a cloud database via Neo4j Aura and instantly generate an API client ID and secret.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://neo4j.com/docs/operations-manual/current/authentication/",
+    "source": "composio_catalog",
+    "composio_toolkit_slug": "neo4j"
+  },
+  {
+    "number": 67,
+    "name": "Snowflake",
+    "category": "Developer, Infra and Data platforms",
+    "website": "docs.snowflake.com",
+    "one_liner": "Snowflake is a cloud-based data warehouse offering elastic scaling, secure data sharing, and SQL analytics across multiple cloud environments",
+    "auth_methods": [
+      "OAUTH2"
+    ],
+    "self_serve": false,
+    "self_serve_evidence": "Typically requires an enterprise setup with key-pair authentication configured by an administrator.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "blocked",
+    "blocker": "Requires Snowflake account administrator setup and enterprise configuration.",
+    "evidence_url": "https://docs.snowflake.com/en/user-guide/security-authentication-overview",
+    "source": "composio_catalog",
+    "composio_toolkit_slug": "snowflake"
+  },
+  {
+    "number": 68,
+    "name": "MongoDB Atlas",
+    "category": "Developer, Infra and Data platforms",
+    "website": "mongodb.com/docs/atlas/api",
+    "one_liner": "MongoDB Atlas is a fully managed cloud database service offering APIs to programmatically manage clusters and database infrastructure.",
+    "auth_methods": [
+      "OAuth2",
+      "API key",
+      "HTTP Digest"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can create a free Atlas account and instantly generate API keys or Service Accounts via the Atlas UI.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://www.mongodb.com/docs/atlas/api/",
+    "source": "manual_research",
+    "composio_toolkit_slug": null
+  },
+  {
+    "number": 69,
+    "name": "Datadog",
+    "category": "Developer, Infra and Data platforms",
+    "website": "docs.datadoghq.com/api",
+    "one_liner": "Datadog offers monitoring, observability, and security for cloud-scale applications, unifying metrics, logs, and traces to help teams detect issues and optimize performance",
+    "auth_methods": [
+      "OAUTH2",
+      "API_KEY",
+      "BEARER_TOKEN"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can create and manage API and Application keys directly within the Datadog platform under Organization Settings.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://docs.datadoghq.com/api/latest/authentication/",
+    "source": "composio_catalog",
+    "composio_toolkit_slug": "datadog"
+  },
+  {
+    "number": 70,
+    "name": "Sentry",
+    "category": "Developer, Infra and Data platforms",
+    "website": "docs.sentry.io/api",
+    "one_liner": "Integrate Sentry to manage your error tracking and monitoring.",
+    "auth_methods": [
+      "OAUTH2"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can instantly generate internal integration tokens for their organizations.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://docs.sentry.io/api/auth/",
+    "source": "composio_catalog",
+    "composio_toolkit_slug": "sentry"
+  },
+  {
+    "number": 71,
+    "name": "Notion",
+    "category": "Productivity and Project Management",
+    "website": "developers.notion.com",
+    "one_liner": "Notion centralizes notes, docs, wikis, and tasks in a unified workspace, letting teams build custom workflows for collaboration and knowledge management",
+    "auth_methods": [
+      "OAUTH2",
+      "API_KEY"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can create Personal Access Tokens and integrations instantly in the Notion Developer Portal.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://developers.notion.com/docs/authorization",
+    "source": "composio_catalog",
+    "composio_toolkit_slug": "notion"
+  },
+  {
+    "number": 72,
+    "name": "Airtable",
+    "category": "Productivity and Project Management",
+    "website": "airtable.com/developers",
+    "one_liner": "Airtable merges spreadsheet functionality with database power, enabling teams to organize projects, track tasks, and collaborate through customizable views, automation, and integrations for data management",
+    "auth_methods": [
+      "OAUTH2",
+      "API_KEY"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can instantly generate Personal Access Tokens via the Airtable Developer hub.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://airtable.com/developers/web/api/authentication",
+    "source": "composio_catalog",
+    "composio_toolkit_slug": "airtable"
+  },
+  {
+    "number": 73,
+    "name": "Linear",
+    "category": "Productivity and Project Management",
+    "website": "developers.linear.app",
+    "one_liner": "Linear is a streamlined issue tracking and project planning tool for modern teams, featuring fast workflows, keyboard shortcuts, and GitHub integrations",
+    "auth_methods": [
+      "OAUTH2",
+      "API_KEY"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can instantly generate Personal API Keys via their account security settings.",
+    "api_surface": "GraphQL",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://developers.linear.app/docs/graphql/working-with-the-graphql-api",
+    "source": "composio_catalog",
+    "composio_toolkit_slug": "linear"
+  },
+  {
+    "number": 74,
+    "name": "Jira",
+    "category": "Productivity and Project Management",
+    "website": "developer.atlassian.com",
+    "one_liner": "A tool for bug tracking, issue tracking, and agile project management.",
+    "auth_methods": [
+      "OAUTH2",
+      "S2S_OAUTH2",
+      "API_KEY"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can generate an API Token or Personal Access Token directly from their Atlassian account settings.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://developer.atlassian.com/cloud/jira/platform/basic-auth-for-rest-apis/",
+    "source": "composio_catalog",
+    "composio_toolkit_slug": "jira"
+  },
+  {
+    "number": 75,
+    "name": "Asana",
+    "category": "Productivity and Project Management",
+    "website": "developers.asana.com",
+    "one_liner": "Tool to help teams organize, track, and manage their work.",
+    "auth_methods": [
+      "OAUTH2"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can generate Personal Access Tokens directly from their Asana account's developer console.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://developers.asana.com/docs/authentication",
+    "source": "composio_catalog",
+    "composio_toolkit_slug": "asana"
+  },
+  {
+    "number": 76,
+    "name": "Monday.com",
+    "category": "Productivity and Project Management",
+    "website": "developer.monday.com",
+    "one_liner": "monday.com is a customizable work management platform for project planning, collaboration, and automation, supporting agile, sales, marketing, and more",
+    "auth_methods": [
+      "OAUTH2"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can generate a Personal API Token directly from their Monday.com administration settings.",
+    "api_surface": "GraphQL",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://developer.monday.com/api-reference/docs/authentication",
+    "source": "composio_catalog",
+    "composio_toolkit_slug": "monday"
+  },
+  {
+    "number": 77,
+    "name": "ClickUp",
+    "category": "Productivity and Project Management",
+    "website": "clickup.com/api",
+    "one_liner": "ClickUp unifies tasks, docs, goals, and chat in a single platform, allowing teams to plan, organize, and collaborate across projects with customizable workflows",
+    "auth_methods": [
+      "OAUTH2",
+      "API_KEY"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can easily generate a Personal Token from their account settings for immediate API access.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://clickup.com/api/developer-portal/authentication/",
+    "source": "composio_catalog",
+    "composio_toolkit_slug": "clickup"
+  },
+  {
+    "number": 78,
+    "name": "Coda",
+    "category": "Productivity and Project Management",
+    "website": "coda.io/developers",
+    "one_liner": "Collaborative workspace platform that transforms documents into powerful tools for team productivity and project management",
+    "auth_methods": [
+      "API_KEY"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can generate a Personal API Token from their Coda account settings.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://coda.io/developers/apis/v1",
+    "source": "composio_catalog",
+    "composio_toolkit_slug": "coda"
+  },
+  {
+    "number": 79,
+    "name": "Smartsheet",
+    "category": "Productivity and Project Management",
+    "website": "smartsheet.com/developers",
+    "one_liner": "Smartsheet is a cloud-based enterprise work management platform that offers an API to automate sheet updates and collaboration.",
+    "auth_methods": [
+      "OAuth2",
+      "Personal Access Token"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can start a 30-day free trial and generate Personal Access Tokens directly from the API Access tab in their settings.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://smartsheet.redoc.ly/docs/api/authentication",
+    "source": "manual_research",
+    "composio_toolkit_slug": null
+  },
+  {
+    "number": 80,
+    "name": "Harvest",
+    "category": "Productivity and Project Management",
+    "website": "harvestapp.com",
+    "one_liner": "Harvest is a time-tracking and invoicing tool designed for teams and freelancers, helping them log billable hours, manage projects, and streamline payments",
+    "auth_methods": [
+      "OAUTH2"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can generate Personal Access Tokens directly from the Developers section of their Harvest ID.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/",
+    "source": "composio_catalog",
+    "composio_toolkit_slug": "harvest"
+  },
+  {
+    "number": 81,
+    "name": "Stripe",
+    "category": "Finance and Fintech",
+    "website": "stripe.com/docs/api",
+    "one_liner": "Stripe offers online payment infrastructure, fraud prevention, and APIs enabling businesses to accept and manage payments globally",
+    "auth_methods": [
+      "API_KEY",
+      "OAUTH2"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can generate test and live API keys instantly from the Stripe Dashboard.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://docs.stripe.com/keys",
+    "source": "composio_catalog",
+    "composio_toolkit_slug": "stripe"
+  },
+  {
+    "number": 82,
+    "name": "Plaid",
+    "category": "Finance and Fintech",
+    "website": "plaid.com/docs",
+    "one_liner": "Plaid provides APIs that connect applications to users' bank accounts to access financial data and authenticate accounts.",
+    "auth_methods": [
+      "API key"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can instantly sign up for a Plaid Dashboard account to access Sandbox API keys for free testing.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://plaid.com/docs/api/",
+    "source": "manual_research",
+    "composio_toolkit_slug": null
+  },
+  {
+    "number": 83,
+    "name": "Binance",
+    "category": "Finance and Fintech",
+    "website": "binance-docs.github.io",
+    "one_liner": "Binance offers a comprehensive suite of APIs for spot trading, futures, options, market data, and account management.",
+    "auth_methods": [
+      "API Key",
+      "API Secret"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can generate API keys directly from their Binance dashboard without contacting sales.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://binance-docs.github.io/apidocs/spot/en/#endpoint-security-type",
+    "source": "manual_research",
+    "composio_toolkit_slug": null
+  },
+  {
+    "number": 84,
+    "name": "Paygent Connect",
+    "category": "Finance and Fintech",
+    "website": "paygent",
+    "one_liner": "Paygent Connect is a Japanese payment gateway offering B2B modules and API integrations for e-commerce transactions.",
+    "auth_methods": [
+      "Client Certificate",
+      "Merchant ID",
+      "Connection ID",
+      "Connection Password"
+    ],
+    "self_serve": false,
+    "self_serve_evidence": "API documentation and sandbox environments are only accessible upon signing a contract with Paygent via their merchant management screen.",
+    "api_surface": "REST - narrow",
+    "has_mcp": false,
+    "buildability_verdict": "blocked",
+    "blocker": "Requires merchant contract and partner approval to access documentation and sandbox.",
+    "evidence_url": "https://developer.paygent.co.jp/docs/api/v1/auth",
+    "source": "manual_research",
+    "composio_toolkit_slug": null
+  },
+  {
+    "number": 85,
+    "name": "iPayX",
+    "category": "Finance and Fintech",
+    "website": "ipayx.ai/docs",
+    "one_liner": "iPayX provides a developer API and MCP server for forensic foreign exchange auditing and detecting hidden bank markups.",
+    "auth_methods": [
+      "API Key"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can sign up on ipayx.ai to get an API key and integrate with their endpoint.",
+    "api_surface": "REST - narrow",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://ipayx.ai/docs",
+    "source": "manual_research",
+    "composio_toolkit_slug": null
+  },
+  {
+    "number": 86,
+    "name": "QuickBooks",
+    "category": "Finance and Fintech",
+    "website": "developer.intuit.com",
+    "one_liner": "Quickbooks is a cloud-based accounting software that helps you manage your finances, track your income and expenses, and get insights into your business",
+    "auth_methods": [
+      "OAUTH2"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can register on the Intuit Developer Portal and create an app to obtain OAuth credentials.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://developer.intuit.com/app/developer/qbo/docs/develop/authentication-and-authorization",
+    "source": "composio_catalog",
+    "composio_toolkit_slug": "quickbooks"
+  },
+  {
+    "number": 87,
+    "name": "Xero",
+    "category": "Finance and Fintech",
+    "website": "developer.xero.com",
+    "one_liner": "Xero is a cloud-based accounting software for small businesses, providing invoicing, bank reconciliation, bookkeeping, and financial reporting in real time",
+    "auth_methods": [
+      "OAUTH2"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can instantly generate client credentials by registering an app in the Xero Developer portal.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://developer.xero.com/documentation/oauth2/overview",
+    "source": "composio_catalog",
+    "composio_toolkit_slug": "xero"
+  },
+  {
+    "number": 88,
+    "name": "Brex",
+    "category": "Finance and Fintech",
+    "website": "developer.brex.com",
+    "one_liner": "Brex provides corporate credit cards, spend management, and financial tools tailored for startups and tech businesses to optimize cash flow, accounting, and growth",
+    "auth_methods": [
+      "OAUTH2",
+      "API_KEY"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can generate an API token directly from the Developer section of their Brex Dashboard.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://developer.brex.com/docs/authentication",
+    "source": "composio_catalog",
+    "composio_toolkit_slug": "brex"
+  },
+  {
+    "number": 89,
+    "name": "Ramp",
+    "category": "Finance and Fintech",
+    "website": "docs.ramp.com",
+    "one_liner": "Ramp is a platform that helps you manage your finances, track your income and expenses, and get insights into your business",
+    "auth_methods": [
+      "OAUTH2"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Admins can create a developer app in the Ramp dashboard to obtain credentials for API access.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://docs.ramp.com/developer/v1/token",
+    "source": "composio_catalog",
+    "composio_toolkit_slug": "ramp"
+  },
+  {
+    "number": 90,
+    "name": "PitchBook",
+    "category": "Finance and Fintech",
+    "website": "pitchbook.com",
+    "one_liner": "PitchBook is a financial data provider that offers comprehensive insights into private and public markets via its API.",
+    "auth_methods": [
+      "API Key"
+    ],
+    "self_serve": false,
+    "self_serve_evidence": "Access to the PitchBook API requires an enterprise-tier offering, and clients must request access directly from the PitchBook Platform or sales team.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "blocked",
+    "blocker": "Enterprise subscription required, manual access approval.",
+    "evidence_url": "https://pitchbook.com/products/api-and-direct-data",
+    "source": "manual_research",
+    "composio_toolkit_slug": null
+  },
+  {
+    "number": 91,
+    "name": "NotebookLM",
+    "category": "AI, Research and Media-native",
+    "website": "notebooklm.google.com",
+    "one_liner": "NotebookLM Enterprise is Google's licensed, source-grounded notebook service for organizing sources in global-location deployments.",
+    "auth_methods": [
+      "OAUTH2"
+    ],
+    "self_serve": false,
+    "self_serve_evidence": "Google offers no public, self-serve developer API key for the consumer version; programmatic access requires session cookie workarounds or enterprise setup.",
+    "api_surface": "no public API",
+    "has_mcp": true,
+    "buildability_verdict": "blocked",
+    "blocker": "No public API for consumer/free accounts. Google now offers a documented Enterprise API (Preview status) via Google Cloud, but it requires GCP enterprise setup \u2014 not a self-serve consumer path.",
+    "evidence_url": "https://cloud.google.com/gemini/docs/notebook/authentication",
+    "source": "composio_catalog",
+    "composio_toolkit_slug": "notebook_lm"
+  },
+  {
+    "number": 92,
+    "name": "Otter AI",
+    "category": "AI, Research and Media-native",
+    "website": "otter.ai",
+    "one_liner": "Otter.ai is an AI-powered meeting assistant that provides automated transcription, summaries, and action item extraction accessible programmatically.",
+    "auth_methods": [
+      "Bearer Token"
+    ],
+    "self_serve": false,
+    "self_serve_evidence": "The Public API is restricted to the Otter Enterprise plan, and access may need to be requested via an account manager.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "blocked",
+    "blocker": "Enterprise plan required for API access.",
+    "evidence_url": "https://help.otter.ai/hc/en-us/articles/12395350314135-Otter-Developer-API",
+    "source": "manual_research",
+    "composio_toolkit_slug": null
+  },
+  {
+    "number": 93,
+    "name": "Fathom",
+    "category": "AI, Research and Media-native",
+    "website": "fathom.video",
+    "one_liner": "AI meeting assistant that records, transcribes, and summarizes meetings",
+    "auth_methods": [
+      "OAUTH2",
+      "API_KEY"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can generate API tokens directly from the Settings \u2192 API section of their Fathom Analytics dashboard.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://usefathom.com/api",
+    "source": "composio_catalog",
+    "composio_toolkit_slug": "fathom"
+  },
+  {
+    "number": 94,
+    "name": "Consensus",
+    "category": "AI, Research and Media-native",
+    "website": "consensus.app",
+    "one_liner": "Consensus provides evidence-based search across scientific research papers.",
+    "auth_methods": [
+      "API_KEY"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can generate API credentials directly from the Integrations section of the Consensus Webapp.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://docs.consensus.app/llms.txt",
+    "source": "composio_catalog",
+    "composio_toolkit_slug": "consensus"
+  },
+  {
+    "number": 95,
+    "name": "Reducto",
+    "category": "AI, Research and Media-native",
+    "website": "reducto.ai",
+    "one_liner": "Reducto provides an API and developer toolkit for advanced document processing, extracting structured data from unstructured files like PDFs and images.",
+    "auth_methods": [
+      "API Key"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can sign up at Reducto Studio and generate an API key immediately to use with their SDKs.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://docs.reducto.ai/api-reference/authentication",
+    "source": "manual_research",
+    "composio_toolkit_slug": null
+  },
+  {
+    "number": 96,
+    "name": "Devin",
+    "category": "AI, Research and Media-native",
+    "website": "devin.ai",
+    "one_liner": "AI-powered access to GitHub repository documentation and codebase analysis, including private repositories, via Devin.",
+    "auth_methods": [
+      "API_KEY"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can generate a Personal Access Token or Service User API Key directly from their Devin account.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://docs.devin.ai/api-reference",
+    "source": "composio_catalog",
+    "composio_toolkit_slug": "devin_mcp"
+  },
+  {
+    "number": 97,
+    "name": "higgsfield",
+    "category": "AI, Research and Media-native",
+    "website": "higgsfield.ai",
+    "one_liner": "Higgsfield AI provides a suite of APIs for generating and editing high-quality video and image content using state-of-the-art AI models.",
+    "auth_methods": [
+      "API Key",
+      "API Secret",
+      "OAuth"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Developers can register on cloud.higgsfield.ai to generate API credentials and purchase API credits directly from the dashboard.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://docs.higgsfield.ai/api-reference/authentication",
+    "source": "manual_research",
+    "composio_toolkit_slug": null
+  },
+  {
+    "number": 98,
+    "name": "Mermaid CLI",
+    "category": "AI, Research and Media-native",
+    "website": "github.com/mermaid-js/mermaid-cli",
+    "one_liner": "Mermaid CLI is a command-line tool that renders Mermaid diagrams into visual formats like SVG, PNG, or PDF locally.",
+    "auth_methods": [
+      "none - local CLI tool"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "It is an open source Node.js CLI tool that can be installed directly via npm without any registration.",
+    "api_surface": "SDK only",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://github.com/mermaid-js/mermaid-cli",
+    "source": "manual_research",
+    "composio_toolkit_slug": null
+  },
+  {
+    "number": 99,
+    "name": "YouTube Transcript",
+    "category": "AI, Research and Media-native",
+    "website": "youtube.com",
+    "one_liner": "YouTube is a video-sharing platform with user-generated content, live streaming, and monetization opportunities, widely used for marketing, education, and entertainment",
+    "auth_methods": [
+      "OAUTH2"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "The unofficial Python library does not require authentication for public videos.",
+    "api_surface": "SDK only",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://pypi.org/project/youtube-transcript-api/",
+    "source": "composio_catalog",
+    "composio_toolkit_slug": "youtube"
+  },
+  {
+    "number": 100,
+    "name": "Grain",
+    "category": "AI, Research and Media-native",
+    "website": "grain.com",
+    "one_liner": "Grain is an AI-powered meeting assistant that provides a developer API to programmatically access meeting recordings, transcripts, and highlights.",
+    "auth_methods": [
+      "Personal Access Token",
+      "Workspace Access Token",
+      "OAuth 2.0"
+    ],
+    "self_serve": true,
+    "self_serve_evidence": "Tokens and OAuth configurations can be generated directly from the Integrations & API Settings page within a Grain account.",
+    "api_surface": "REST - broad",
+    "has_mcp": true,
+    "buildability_verdict": "ready",
+    "blocker": null,
+    "evidence_url": "https://grain.com/app/settings/integrations?tab=api",
+    "source": "manual_research",
+    "composio_toolkit_slug": null
+  }
+]

@@ -1,0 +1,1338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Composio App Research - AI Product Ops</title>
+    <style>
+        :root {
+            --primary: #1a1a1a;
+            --secondary: #4a4a4a;
+            --accent: #0066cc;
+            --success: #28a745;
+            --danger: #dc3545;
+            --bg: #f8f9fa;
+            --card-bg: #ffffff;
+            --border: #e0e0e0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: var(--primary);
+            background-color: var(--bg);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: var(--secondary);
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        .stat-card {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--accent);
+        }
+        .stat-label {
+            color: var(--secondary);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .insight-block {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+            border-left: 5px solid var(--accent);
+        }
+        .insight-block h3 {
+            margin-top: 0;
+            color: var(--accent);
+        }
+        .patterns-section {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+            border-left: 5px solid var(--accent);
+        }
+        .patterns-section h3 {
+            margin-top: 0;
+            color: var(--accent);
+        }
+        .badge {
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            color: white;
+        }
+        .badge-ready { background-color: var(--success); }
+        .badge-blocked { background-color: var(--danger); }
+        .badge-partial { background-color: #ffc107; color: #000; }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--card-bg);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+        th {
+            background-color: #f1f3f5;
+            font-weight: 600;
+            color: var(--secondary);
+        }
+        tr:hover {
+            background-color: #f8f9fa;
+        }
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Product Ops: 100 Apps Research</h1>
+            <p>Automated analysis of top 100 SaaS APIs for AI agent integration readiness.</p>
+        </header>
+
+        <section id="patterns-insights" class="insights-container">
+            <h2>Key Patterns & Insights</h2>
+            
+            <div class="insight-block">
+                <h3>1. Authentication: OAuth2 and API Keys Dominate</h3>
+                <p>When it comes to securing developer access, <strong>OAuth2 and API keys</strong> cover the clear majority of the 100 apps we analyzed. While there is a long, thin tail of variants—including Bearer tokens, Basic Auth, PATs, and JWTs—the industry has largely standardized around these two models. Notably, two tools (Sherlock and Mermaid CLI) bypass traditional auth entirely, operating strictly as local CLI tools.</p>
+            </div>
+
+            <div class="insight-block">
+                <h3>2. Self-Serve is the Default, Not the Exception</h3>
+                <p>Gatekeeping basic API access is becoming rare. Overall, <strong>87 out of 100 apps are fully self-serve</strong>, allowing developers to generate credentials without talking to a human. Certain sectors are completely frictionless: Communications/Messaging and Productivity/Project Management boast a 100% self-serve rate, making them the easiest categories to build in. The remaining categories still cluster strongly around an 80-90% self-serve rate.</p>
+            </div>
+
+            <div class="insight-block">
+                <h3>3. The "Blocked" Apps Share a Common Theme: Gatekeeping</h3>
+                <p>Our final buildability breakdown sits at <strong>87 Ready, 12 Blocked, and 1 Partial</strong> (Google Ads). The 12 blocked apps reveal a stark pattern: the blocker is almost never a lack of technology. With the sole exception of NotebookLM (which currently lacks any public consumer API path), blockers are driven purely by business gatekeeping:</p>
+                <ul>
+                    <li><strong>Enterprise-Tier Requirements (4):</strong> Snowflake, PitchBook, Otter AI, Ahrefs</li>
+                    <li><strong>Partner/Sales Approval (5):</strong> DealCloud, Pylon, Waterfall.io, Paygent Connect, Salesforce Commerce Cloud</li>
+                    <li><strong>Paid Plan Required (1):</strong> Amazon Selling Partner</li>
+                    <li><strong>Platform Review Gates (1):</strong> LinkedIn Ads</li>
+                    <li><strong>No Public Consumer API (1):</strong> NotebookLM</li>
+                </ul>
+            </div>
+
+            <div class="insight-block">
+                <h3>4. MCP Adoption Tracks Dev-Tool Maturity, Not Company Size</h3>
+                <p>Model Context Protocol (MCP) availability strongly correlates with the engineering culture of the platform. Categories like Developer/Infra, Productivity/PM, and AI-native tools show a massive <strong>90-100% MCP coverage</strong>. Conversely, CRM/Sales and Marketing/Ads platforms lag significantly at around 50%. MCP adoption is currently driven by developer-tool culture rather than sheer company size or revenue.</p>
+            </div>
+
+            <div class="insight-block">
+                <h3>5. The Importance of Human-in-the-Loop Verification</h3>
+                <p>Our autonomous research agent flagged an impressive 79 out of 100 apps as having an MCP server (<code>has_mcp: true</code>). Because claims of finding integrations are highly susceptible to AI false positives, this became a priority for our hand-check sample.</p>
+                <p>We ran a targeted, independent 8-app verification pass. The verification confirmed 5 out of 8 checks exactly (100% directional accuracy), but highlighted a critical nuance the agent missed: <strong>the distinction between official, first-party MCP servers and community-built wrappers</strong> (e.g., Mailchimp, which relies on community servers like Pipedream or StackOne). The verification pass also successfully corrected two blocker descriptions (shifting Google Ads to "partial" and clarifying NotebookLM's enterprise-only preview status). This ties our data together perfectly: while AI agents are incredible at bulk data gathering, human-in-the-loop verification remains essential for catching nuanced technical distinctions.</p>
+            </div>
+        </section>
+
+        <h2>Research Statistics</h2>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">100</div>
+                <div class="stat-label">Apps Researched</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">87</div>
+                <div class="stat-label">Self-Serve APIs</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">87</div>
+                <div class="stat-label">Toolkit Ready</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">12</div>
+                <div class="stat-label">Blocked/Gated</div>
+            </div>
+        </div>
+
+        <h2>Methodology: The Agent & Verification</h2>
+        <div class="patterns-section" style="border-left-color: #28a745;">
+            <h3>The Pipeline</h3>
+            <p>We built a multi-stage Python pipeline (<code>build_dataset.py</code> and <code>research_agent.py</code>) using the <strong>Composio SDK</strong> and the <strong>Google Antigravity Agent Framework</strong>.</p>
+            <ol>
+                <li><strong>Catalog Matching:</strong> First, the agent cross-referenced the 100 apps against the live Composio Toolkit catalog using <code>composio.toolkits.list()</code>. It matched 61 apps instantly, extracting their authentication schemes and base URLs.</li>
+                <li><strong>Web Research:</strong> Next, we spawned asynchronous <code>app_researcher</code> subagents using the Antigravity SDK. The agents utilized web search tools to locate specific developer documentation and extract missing data (Self-serve status, blockers, MCP availability).</li>
+                <li><strong>Human in the loop:</strong> A human was required to manually verify a random sample of the findings (e.g., confirming Binance's open-source MCP and Otter AI's enterprise-only API limit) and to resolve apps that blocked automated scraper traffic.</li>
+            </ol>
+            <h3>Accuracy Verification (Sample)</h3>
+            <p>We verified 8 randomly selected apps. Exact-match accuracy was <strong>62.5%</strong>, with directional accuracy of <strong>100%</strong>.</p>
+            <p>The apps checked were: Notion, Airtable, Linear, Cloudflare, Mailchimp, Google Ads, NotebookLM, and Twenty.</p>
+            <p>There were 3 nuanced misses corrected:</p>
+            <ul>
+                <li><strong>Google Ads</strong> (buildability_verdict, blocker):<br><em>Before:</em> {'buildability_verdict': 'blocked', 'blocker': 'Requires manual review and approval of the developer token by Google.'}<br><em>After:</em> {'buildability_verdict': 'partial', 'blocker': "Developer token needs Google approval for production access; an auto-approved 'Explorer' tier allows immediate self-serve access to test accounts only."}<br><a href='https://developers.google.com/google-ads/api/docs/oauth/overview' target='_blank'>Source</a></li>\n                <li><strong>Mailchimp</strong> (mcp_note):<br><em>Before:</em> {'mcp_note': None}<br><em>After:</em> {'mcp_note': 'Community/third-party MCP servers exist (Pipedream, Zapier, StackOne); no official server from Mailchimp/Intuit.'}<br><a href='https://mailchimp.com/developer/marketing/docs/fundamentals/' target='_blank'>Source</a></li>\n                <li><strong>NotebookLM</strong> (blocker):<br><em>Before:</em> {'blocker': 'No official public API exists for consumer accounts; requires session cookie extraction.'}<br><em>After:</em> {'blocker': 'No public API for consumer/free accounts. Google now offers a documented Enterprise API (Preview status) via Google Cloud, but it requires GCP enterprise setup — not a self-serve consumer path.'}<br><a href='https://cloud.google.com/gemini/docs/notebook/authentication' target='_blank'>Source</a></li>\n                
+            </ul>
+        </div>
+
+        <h2>Raw Data Matrix</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>App</th>
+                    <th>Category</th>
+                    <th>Auth</th>
+                    <th>Self-Serve</th>
+                    <th>Verdict</th>
+                    <th>Blocker</th>
+                    <th>Docs</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td>1</td>
+                    <td><strong>Salesforce</strong></td>
+                    <td>CRM and Sales</td>
+                    <td>OAUTH2, S2S_OAUTH2</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_authorization.htm' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td><strong>HubSpot</strong></td>
+                    <td>CRM and Sales</td>
+                    <td>OAUTH2, API_KEY</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://developers.hubspot.com/docs/guides/apps/authentication/authentication-overview' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td><strong>Pipedrive</strong></td>
+                    <td>CRM and Sales</td>
+                    <td>OAUTH2, API_KEY</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://pipedrive.readme.io/docs/core-api-concepts-authentication' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>4</td>
+                    <td><strong>Attio</strong></td>
+                    <td>CRM and Sales</td>
+                    <td>OAUTH2</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://docs.attio.com/docs/authentication' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>5</td>
+                    <td><strong>Twenty</strong></td>
+                    <td>CRM and Sales</td>
+                    <td>API keys, Bearer token</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://docs.twenty.com/developers/api/authentication' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>6</td>
+                    <td><strong>Podio</strong></td>
+                    <td>CRM and Sales</td>
+                    <td>OAuth 2.0, App Token</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://developers.podio.com/authentication' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>7</td>
+                    <td><strong>Zoho CRM</strong></td>
+                    <td>CRM and Sales</td>
+                    <td>OAuth 2.0</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://www.zoho.com/crm/developer/docs/api/v6/oauth-overview.html' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>8</td>
+                    <td><strong>Close</strong></td>
+                    <td>CRM and Sales</td>
+                    <td>API_KEY</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://developer.close.com/basics/authentication/' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>9</td>
+                    <td><strong>Copper</strong></td>
+                    <td>CRM and Sales</td>
+                    <td>API keys, OAuth 2.0</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://developer.copper.com/authentication.html' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>10</td>
+                    <td><strong>DealCloud</strong></td>
+                    <td>CRM and Sales</td>
+                    <td>OAuth 2.0 Client Credentials</td>
+                    <td>❌</td>
+                    <td><span class="badge badge-blocked">BLOCKED</span></td>
+                    <td>Requires enterprise client or partner approval, no self-serve developer access.</td>
+                    <td><a href='https://developer.intapp.com/docs/dealcloud-api/authentication' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>11</td>
+                    <td><strong>Zendesk</strong></td>
+                    <td>Support and Helpdesk</td>
+                    <td>OAUTH2</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://developer.zendesk.com/api-reference/introduction/security-and-auth/' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>12</td>
+                    <td><strong>Intercom</strong></td>
+                    <td>Support and Helpdesk</td>
+                    <td>OAUTH2</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://developers.intercom.com/docs/build-an-integration/learn-more/authentication/' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>13</td>
+                    <td><strong>Freshdesk</strong></td>
+                    <td>Support and Helpdesk</td>
+                    <td>API_KEY</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://developers.freshdesk.com/api/#authentication' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>14</td>
+                    <td><strong>Front</strong></td>
+                    <td>Support and Helpdesk</td>
+                    <td>Bearer Token, OAuth 2.0</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://dev.frontapp.com/docs/authentication-1' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>15</td>
+                    <td><strong>Pylon</strong></td>
+                    <td>Support and Helpdesk</td>
+                    <td>DCR_OAUTH</td>
+                    <td>❌</td>
+                    <td><span class="badge badge-blocked">BLOCKED</span></td>
+                    <td>No self-serve sign-up; requires a sales conversation to get access.</td>
+                    <td><a href='https://usepylon.com/docs/api' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>16</td>
+                    <td><strong>LiveAgent</strong></td>
+                    <td>Support and Helpdesk</td>
+                    <td>API Key</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://support.liveagent.com/840770-Complete-API-reference' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>17</td>
+                    <td><strong>Plain</strong></td>
+                    <td>Support and Helpdesk</td>
+                    <td>API_KEY</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://www.plain.com/docs/graphql-api/authentication' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>18</td>
+                    <td><strong>Help Scout</strong></td>
+                    <td>Support and Helpdesk</td>
+                    <td>OAUTH2</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://developer.helpscout.com/mailbox-api/overview/authentication/' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>19</td>
+                    <td><strong>Gorgias</strong></td>
+                    <td>Support and Helpdesk</td>
+                    <td>API_KEY, OAUTH2</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://developers.gorgias.com/reference/authentication' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>20</td>
+                    <td><strong>Gladly</strong></td>
+                    <td>Support and Helpdesk</td>
+                    <td>Basic Authentication</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://developer.gladly.com/rest/' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>21</td>
+                    <td><strong>Slack</strong></td>
+                    <td>Communications and Messaging</td>
+                    <td>OAUTH2</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://api.slack.com/authentication' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>22</td>
+                    <td><strong>Twilio</strong></td>
+                    <td>Communications and Messaging</td>
+                    <td>Basic Authentication, API Keys</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://www.twilio.com/docs/usage/security' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>23</td>
+                    <td><strong>Zoho Cliq</strong></td>
+                    <td>Communications and Messaging</td>
+                    <td>OAuth 2.0</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://www.zoho.com/cliq/help/restapi/authentication.html' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>24</td>
+                    <td><strong>Lark (Larksuite)</strong></td>
+                    <td>Communications and Messaging</td>
+                    <td>OAuth2, API Key</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://open.larksuite.com/document/server-docs/getting-started/api-overview' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>25</td>
+                    <td><strong>Pumble</strong></td>
+                    <td>Communications and Messaging</td>
+                    <td>API Key</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://pumble.com/help/api/' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>26</td>
+                    <td><strong>Discord</strong></td>
+                    <td>Communications and Messaging</td>
+                    <td>OAUTH2</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://discord.com/developers/docs/topics/oauth2' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>27</td>
+                    <td><strong>Telegram</strong></td>
+                    <td>Communications and Messaging</td>
+                    <td>API_KEY</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://core.telegram.org/bots/api#authorizing-your-bot' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>28</td>
+                    <td><strong>WhatsApp Business</strong></td>
+                    <td>Communications and Messaging</td>
+                    <td>OAUTH2, API_KEY</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://developers.facebook.com/docs/whatsapp/cloud-api/get-started' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>29</td>
+                    <td><strong>Aircall</strong></td>
+                    <td>Communications and Messaging</td>
+                    <td>Basic, OAuth2</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://developer.aircall.io/api-references/#authentication' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>30</td>
+                    <td><strong>Vonage</strong></td>
+                    <td>Communications and Messaging</td>
+                    <td>JWT, Basic, API Key</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://developer.vonage.com/en/getting-started/concepts/authentication' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>31</td>
+                    <td><strong>Google Ads</strong></td>
+                    <td>Marketing, Ads, Email and Social</td>
+                    <td>OAUTH2</td>
+                    <td>❌</td>
+                    <td><span class="badge badge-partial">PARTIAL</span></td>
+                    <td>Developer token needs Google approval for production access; an auto-approved 'Explorer' tier allows immediate self-serve access to test accounts only.</td>
+                    <td><a href='https://developers.google.com/google-ads/api/docs/oauth/overview' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>32</td>
+                    <td><strong>Meta Ads</strong></td>
+                    <td>Marketing, Ads, Email and Social</td>
+                    <td>OAUTH2, API_KEY</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://developers.facebook.com/docs/marketing-api/authentication' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>33</td>
+                    <td><strong>LinkedIn Ads</strong></td>
+                    <td>Marketing, Ads, Email and Social</td>
+                    <td>OAUTH2</td>
+                    <td>❌</td>
+                    <td><span class="badge badge-blocked">BLOCKED</span></td>
+                    <td>Requires approval for the LinkedIn Marketing Developer Program.</td>
+                    <td><a href='https://learn.microsoft.com/en-us/linkedin/marketing/' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>34</td>
+                    <td><strong>GoHighLevel</strong></td>
+                    <td>Marketing, Ads, Email and Social</td>
+                    <td>OAUTH2</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://developers.gohighlevel.com/docs/authentication' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>35</td>
+                    <td><strong>Mailchimp</strong></td>
+                    <td>Marketing, Ads, Email and Social</td>
+                    <td>OAUTH2</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://mailchimp.com/developer/marketing/docs/fundamentals/' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>36</td>
+                    <td><strong>Klaviyo</strong></td>
+                    <td>Marketing, Ads, Email and Social</td>
+                    <td>API_KEY, OAUTH2</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://developers.klaviyo.com/en/docs/create_a_test_account' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>37</td>
+                    <td><strong>systeme.io</strong></td>
+                    <td>Marketing, Ads, Email and Social</td>
+                    <td>API Key</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://systeme.io/help/articles/11099688-how-to-generate-an-api-key' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>38</td>
+                    <td><strong>Pinterest</strong></td>
+                    <td>Marketing, Ads, Email and Social</td>
+                    <td>OAUTH2</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://developers.pinterest.com/docs/getting-started/introduction/' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>39</td>
+                    <td><strong>Threads (Meta)</strong></td>
+                    <td>Marketing, Ads, Email and Social</td>
+                    <td>OAuth2</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://developers.facebook.com/docs/threads/overview' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>40</td>
+                    <td><strong>SendGrid</strong></td>
+                    <td>Marketing, Ads, Email and Social</td>
+                    <td>API_KEY</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://docs.sendgrid.com/for-developers/sending-email/api-getting-started' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>41</td>
+                    <td><strong>Shopify</strong></td>
+                    <td>Ecommerce</td>
+                    <td>API_KEY, OAUTH2, S2S_OAUTH2</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://shopify.dev/docs/apps/getting-started/create' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>42</td>
+                    <td><strong>WooCommerce</strong></td>
+                    <td>Ecommerce</td>
+                    <td>Basic, OAuth 1.0a</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://woocommerce.com/document/woocommerce-rest-api/' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>43</td>
+                    <td><strong>BigCommerce</strong></td>
+                    <td>Ecommerce</td>
+                    <td>OAuth2, API Token, JWT</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://developer.bigcommerce.com/api-docs/getting-started/authentication' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>44</td>
+                    <td><strong>Salesforce Commerce Cloud</strong></td>
+                    <td>Ecommerce</td>
+                    <td>OAUTH2, S2S_OAUTH2</td>
+                    <td>❌</td>
+                    <td><span class="badge badge-blocked">BLOCKED</span></td>
+                    <td>Requires enterprise contract or partner approval for sandbox access.</td>
+                    <td><a href='https://developer.salesforce.com/docs/commerce/commerce-api/references/authorization' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>45</td>
+                    <td><strong>Magento (Adobe Commerce)</strong></td>
+                    <td>Ecommerce</td>
+                    <td>Bearer Token, OAuth 1.0a</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://developer.adobe.com/commerce/webapi/rest/authentication/' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>46</td>
+                    <td><strong>Squarespace</strong></td>
+                    <td>Ecommerce</td>
+                    <td>OAUTH2</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://developers.squarespace.com/commerce-api/getting-started' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>47</td>
+                    <td><strong>Ecwid</strong></td>
+                    <td>Ecommerce</td>
+                    <td>OAuth2, API Token</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://api-docs.ecwid.com/reference/rest-api-overview' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>48</td>
+                    <td><strong>Gumroad</strong></td>
+                    <td>Ecommerce</td>
+                    <td>OAUTH2</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://app.gumroad.com/api' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>49</td>
+                    <td><strong>Amazon Selling Partner</strong></td>
+                    <td>Ecommerce</td>
+                    <td>OAuth2</td>
+                    <td>❌</td>
+                    <td><span class="badge badge-blocked">BLOCKED</span></td>
+                    <td>paid plan required</td>
+                    <td><a href='https://developer-docs.amazon.com/sp-api/docs/authorizing-selling-partner-api-applications' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>50</td>
+                    <td><strong>fanbasis</strong></td>
+                    <td>Ecommerce</td>
+                    <td>API key</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://docs.fanbasis.com/api-reference' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>51</td>
+                    <td><strong>DataForSEO</strong></td>
+                    <td>Data, SEO and Scraping</td>
+                    <td>BASIC</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://docs.dataforseo.com/v3/appendix/authentication/' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>52</td>
+                    <td><strong>SE Ranking</strong></td>
+                    <td>Data, SEO and Scraping</td>
+                    <td>API key</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://seranking.com/api.html' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>53</td>
+                    <td><strong>Ahrefs</strong></td>
+                    <td>Data, SEO and Scraping</td>
+                    <td>API_KEY</td>
+                    <td>❌</td>
+                    <td><span class="badge badge-blocked">BLOCKED</span></td>
+                    <td>Requires an Enterprise plan for API access.</td>
+                    <td><a href='https://docs.ahrefs.com/en/api/docs/introduction' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>54</td>
+                    <td><strong>MrScraper</strong></td>
+                    <td>Data, SEO and Scraping</td>
+                    <td>API_KEY</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://mrscraper.com/docs/api' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>55</td>
+                    <td><strong>Apify</strong></td>
+                    <td>Data, SEO and Scraping</td>
+                    <td>API_KEY</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://docs.apify.com/api/v2' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>56</td>
+                    <td><strong>Firecrawl</strong></td>
+                    <td>Data, SEO and Scraping</td>
+                    <td>API_KEY</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://docs.firecrawl.dev/api-reference' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>57</td>
+                    <td><strong>Bright Data</strong></td>
+                    <td>Data, SEO and Scraping</td>
+                    <td>API_KEY</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://docs.brightdata.com/api-reference/' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>58</td>
+                    <td><strong>Sherlock</strong></td>
+                    <td>Data, SEO and Scraping</td>
+                    <td>none - local CLI tool</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://github.com/sherlock-project/sherlock' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>59</td>
+                    <td><strong>Waterfall.io</strong></td>
+                    <td>Data, SEO and Scraping</td>
+                    <td>API key</td>
+                    <td>❌</td>
+                    <td><span class="badge badge-blocked">BLOCKED</span></td>
+                    <td>requires sales contact</td>
+                    <td><a href='https://docs.waterfall.io/api-reference' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>60</td>
+                    <td><strong>Clay</strong></td>
+                    <td>Data, SEO and Scraping</td>
+                    <td>API key</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://clay.com/developer' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>61</td>
+                    <td><strong>GitHub</strong></td>
+                    <td>Developer, Infra and Data platforms</td>
+                    <td>OAUTH2</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://docs.github.com/en/rest/authentication/about-authentication' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>62</td>
+                    <td><strong>Vercel</strong></td>
+                    <td>Developer, Infra and Data platforms</td>
+                    <td>API_KEY</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://vercel.com/docs/rest-api' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>63</td>
+                    <td><strong>Netlify</strong></td>
+                    <td>Developer, Infra and Data platforms</td>
+                    <td>OAuth2, Personal Access Token</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://docs.netlify.com/api/get-started/' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>64</td>
+                    <td><strong>Cloudflare</strong></td>
+                    <td>Developer, Infra and Data platforms</td>
+                    <td>API_KEY</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://developers.cloudflare.com/fundamentals/api/get-started/create-token/' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>65</td>
+                    <td><strong>Supabase</strong></td>
+                    <td>Developer, Infra and Data platforms</td>
+                    <td>OAUTH2, API_KEY</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://supabase.com/docs/reference/api/introduction' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>66</td>
+                    <td><strong>Neo4j</strong></td>
+                    <td>Developer, Infra and Data platforms</td>
+                    <td>OAUTH2, BASIC, API_KEY, S2S_OAUTH2</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://neo4j.com/docs/operations-manual/current/authentication/' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>67</td>
+                    <td><strong>Snowflake</strong></td>
+                    <td>Developer, Infra and Data platforms</td>
+                    <td>OAUTH2</td>
+                    <td>❌</td>
+                    <td><span class="badge badge-blocked">BLOCKED</span></td>
+                    <td>Requires Snowflake account administrator setup and enterprise configuration.</td>
+                    <td><a href='https://docs.snowflake.com/en/user-guide/security-authentication-overview' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>68</td>
+                    <td><strong>MongoDB Atlas</strong></td>
+                    <td>Developer, Infra and Data platforms</td>
+                    <td>OAuth2, API key, HTTP Digest</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://www.mongodb.com/docs/atlas/api/' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>69</td>
+                    <td><strong>Datadog</strong></td>
+                    <td>Developer, Infra and Data platforms</td>
+                    <td>OAUTH2, API_KEY, BEARER_TOKEN</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://docs.datadoghq.com/api/latest/authentication/' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>70</td>
+                    <td><strong>Sentry</strong></td>
+                    <td>Developer, Infra and Data platforms</td>
+                    <td>OAUTH2</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://docs.sentry.io/api/auth/' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>71</td>
+                    <td><strong>Notion</strong></td>
+                    <td>Productivity and Project Management</td>
+                    <td>OAUTH2, API_KEY</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://developers.notion.com/docs/authorization' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>72</td>
+                    <td><strong>Airtable</strong></td>
+                    <td>Productivity and Project Management</td>
+                    <td>OAUTH2, API_KEY</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://airtable.com/developers/web/api/authentication' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>73</td>
+                    <td><strong>Linear</strong></td>
+                    <td>Productivity and Project Management</td>
+                    <td>OAUTH2, API_KEY</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://developers.linear.app/docs/graphql/working-with-the-graphql-api' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>74</td>
+                    <td><strong>Jira</strong></td>
+                    <td>Productivity and Project Management</td>
+                    <td>OAUTH2, S2S_OAUTH2, API_KEY</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://developer.atlassian.com/cloud/jira/platform/basic-auth-for-rest-apis/' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>75</td>
+                    <td><strong>Asana</strong></td>
+                    <td>Productivity and Project Management</td>
+                    <td>OAUTH2</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://developers.asana.com/docs/authentication' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>76</td>
+                    <td><strong>Monday.com</strong></td>
+                    <td>Productivity and Project Management</td>
+                    <td>OAUTH2</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://developer.monday.com/api-reference/docs/authentication' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>77</td>
+                    <td><strong>ClickUp</strong></td>
+                    <td>Productivity and Project Management</td>
+                    <td>OAUTH2, API_KEY</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://clickup.com/api/developer-portal/authentication/' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>78</td>
+                    <td><strong>Coda</strong></td>
+                    <td>Productivity and Project Management</td>
+                    <td>API_KEY</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://coda.io/developers/apis/v1' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>79</td>
+                    <td><strong>Smartsheet</strong></td>
+                    <td>Productivity and Project Management</td>
+                    <td>OAuth2, Personal Access Token</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://smartsheet.redoc.ly/docs/api/authentication' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>80</td>
+                    <td><strong>Harvest</strong></td>
+                    <td>Productivity and Project Management</td>
+                    <td>OAUTH2</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>81</td>
+                    <td><strong>Stripe</strong></td>
+                    <td>Finance and Fintech</td>
+                    <td>API_KEY, OAUTH2</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://docs.stripe.com/keys' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>82</td>
+                    <td><strong>Plaid</strong></td>
+                    <td>Finance and Fintech</td>
+                    <td>API key</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://plaid.com/docs/api/' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>83</td>
+                    <td><strong>Binance</strong></td>
+                    <td>Finance and Fintech</td>
+                    <td>API Key, API Secret</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://binance-docs.github.io/apidocs/spot/en/#endpoint-security-type' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>84</td>
+                    <td><strong>Paygent Connect</strong></td>
+                    <td>Finance and Fintech</td>
+                    <td>Client Certificate, Merchant ID, Connection ID, Connection Password</td>
+                    <td>❌</td>
+                    <td><span class="badge badge-blocked">BLOCKED</span></td>
+                    <td>Requires merchant contract and partner approval to access documentation and sandbox.</td>
+                    <td><a href='https://developer.paygent.co.jp/docs/api/v1/auth' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>85</td>
+                    <td><strong>iPayX</strong></td>
+                    <td>Finance and Fintech</td>
+                    <td>API Key</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://ipayx.ai/docs' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>86</td>
+                    <td><strong>QuickBooks</strong></td>
+                    <td>Finance and Fintech</td>
+                    <td>OAUTH2</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://developer.intuit.com/app/developer/qbo/docs/develop/authentication-and-authorization' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>87</td>
+                    <td><strong>Xero</strong></td>
+                    <td>Finance and Fintech</td>
+                    <td>OAUTH2</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://developer.xero.com/documentation/oauth2/overview' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>88</td>
+                    <td><strong>Brex</strong></td>
+                    <td>Finance and Fintech</td>
+                    <td>OAUTH2, API_KEY</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://developer.brex.com/docs/authentication' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>89</td>
+                    <td><strong>Ramp</strong></td>
+                    <td>Finance and Fintech</td>
+                    <td>OAUTH2</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://docs.ramp.com/developer/v1/token' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>90</td>
+                    <td><strong>PitchBook</strong></td>
+                    <td>Finance and Fintech</td>
+                    <td>API Key</td>
+                    <td>❌</td>
+                    <td><span class="badge badge-blocked">BLOCKED</span></td>
+                    <td>Enterprise subscription required, manual access approval.</td>
+                    <td><a href='https://pitchbook.com/products/api-and-direct-data' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>91</td>
+                    <td><strong>NotebookLM</strong></td>
+                    <td>AI, Research and Media-native</td>
+                    <td>OAUTH2</td>
+                    <td>❌</td>
+                    <td><span class="badge badge-blocked">BLOCKED</span></td>
+                    <td>No public API for consumer/free accounts. Google now offers a documented Enterprise API (Preview status) via Google Cloud, but it requires GCP enterprise setup — not a self-serve consumer path.</td>
+                    <td><a href='https://cloud.google.com/gemini/docs/notebook/authentication' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>92</td>
+                    <td><strong>Otter AI</strong></td>
+                    <td>AI, Research and Media-native</td>
+                    <td>Bearer Token</td>
+                    <td>❌</td>
+                    <td><span class="badge badge-blocked">BLOCKED</span></td>
+                    <td>Enterprise plan required for API access.</td>
+                    <td><a href='https://help.otter.ai/hc/en-us/articles/12395350314135-Otter-Developer-API' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>93</td>
+                    <td><strong>Fathom</strong></td>
+                    <td>AI, Research and Media-native</td>
+                    <td>OAUTH2, API_KEY</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://usefathom.com/api' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>94</td>
+                    <td><strong>Consensus</strong></td>
+                    <td>AI, Research and Media-native</td>
+                    <td>API_KEY</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://docs.consensus.app/llms.txt' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>95</td>
+                    <td><strong>Reducto</strong></td>
+                    <td>AI, Research and Media-native</td>
+                    <td>API Key</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://docs.reducto.ai/api-reference/authentication' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>96</td>
+                    <td><strong>Devin</strong></td>
+                    <td>AI, Research and Media-native</td>
+                    <td>API_KEY</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://docs.devin.ai/api-reference' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>97</td>
+                    <td><strong>higgsfield</strong></td>
+                    <td>AI, Research and Media-native</td>
+                    <td>API Key, API Secret, OAuth</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://docs.higgsfield.ai/api-reference/authentication' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>98</td>
+                    <td><strong>Mermaid CLI</strong></td>
+                    <td>AI, Research and Media-native</td>
+                    <td>none - local CLI tool</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://github.com/mermaid-js/mermaid-cli' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>99</td>
+                    <td><strong>YouTube Transcript</strong></td>
+                    <td>AI, Research and Media-native</td>
+                    <td>OAUTH2</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://pypi.org/project/youtube-transcript-api/' target='_blank'>Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>100</td>
+                    <td><strong>Grain</strong></td>
+                    <td>AI, Research and Media-native</td>
+                    <td>Personal Access Token, Workspace Access Token, OAuth 2.0</td>
+                    <td>✅</td>
+                    <td><span class="badge badge-ready">READY</span></td>
+                    <td>-</td>
+                    <td><a href='https://grain.com/app/settings/integrations?tab=api' target='_blank'>Link</a></td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

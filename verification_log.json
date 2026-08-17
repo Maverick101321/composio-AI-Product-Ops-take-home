@@ -1,0 +1,43 @@
+{
+  "sample_size": 8,
+  "method": "independent web search against live docs, separate from the original research agent",
+  "first_pass_exact_match_accuracy": "62.5%",
+  "directional_accuracy": "100%",
+  "corrections": [
+    {
+      "app": "Google Ads",
+      "field": "buildability_verdict, blocker",
+      "before": {
+        "buildability_verdict": "blocked",
+        "blocker": "Requires manual review and approval of the developer token by Google."
+      },
+      "after": {
+        "buildability_verdict": "partial",
+        "blocker": "Developer token needs Google approval for production access; an auto-approved 'Explorer' tier allows immediate self-serve access to test accounts only."
+      },
+      "source_url": "https://developers.google.com/google-ads/api/docs/oauth/overview"
+    },
+    {
+      "app": "Mailchimp",
+      "field": "mcp_note",
+      "before": {
+        "mcp_note": null
+      },
+      "after": {
+        "mcp_note": "Community/third-party MCP servers exist (Pipedream, Zapier, StackOne); no official server from Mailchimp/Intuit."
+      },
+      "source_url": "https://mailchimp.com/developer/marketing/docs/fundamentals/"
+    },
+    {
+      "app": "NotebookLM",
+      "field": "blocker",
+      "before": {
+        "blocker": "No official public API exists for consumer accounts; requires session cookie extraction."
+      },
+      "after": {
+        "blocker": "No public API for consumer/free accounts. Google now offers a documented Enterprise API (Preview status) via Google Cloud, but it requires GCP enterprise setup \u2014 not a self-serve consumer path."
+      },
+      "source_url": "https://cloud.google.com/gemini/docs/notebook/authentication"
+    }
+  ]
+}

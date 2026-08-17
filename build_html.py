@@ -194,7 +194,7 @@ def generate_html():
 
             <div class="insight-block">
                 <h3>5. The Importance of Human-in-the-Loop Verification</h3>
-                <p>Our autonomous research agent flagged an impressive {has_mcp} out of {researched} apps as having an MCP server (<code>has_mcp: true</code>). Because claims of finding integrations are highly susceptible to AI false positives, this became a priority for our hand-check sample.</p>
+                <p>Our human-directed research agent flagged an impressive {has_mcp} out of {researched} apps as having an MCP server (<code>has_mcp: true</code>). Because claims of finding integrations are highly susceptible to AI false positives, this became a priority for our hand-check sample.</p>
                 <p>We ran a targeted, independent 8-app verification pass. The verification confirmed 5 out of 8 checks exactly (100% directional accuracy), but highlighted a critical nuance the agent missed: <strong>the distinction between official, first-party MCP servers and community-built wrappers</strong> (e.g., Mailchimp, which relies on community servers like Pipedream or StackOne). The verification pass also successfully corrected two blocker descriptions (shifting Google Ads to "partial" and clarifying NotebookLM's enterprise-only preview status). This ties our data together perfectly: while AI agents are incredible at bulk data gathering, human-in-the-loop verification remains essential for catching nuanced technical distinctions.</p>
             </div>
         </section>
@@ -229,7 +229,7 @@ def generate_html():
                 <li><strong>Human in the loop:</strong> The human operator reviewed and validated the output after every batch, issuing corrections when the agent's output was incomplete or hallucinated (e.g., rejecting bare homepages and demanding specific API documentation URLs, or catching that Mailchimp's MCP servers are community-built rather than official).</li>
             </ol>
             <h3>Accuracy Verification (Sample)</h3>
-            <p>We verified {vlog['sample_size']} randomly selected apps. Exact-match accuracy was <strong>{vlog['first_pass_exact_match_accuracy']}</strong>, with directional accuracy of <strong>{vlog['directional_accuracy']}</strong>.</p>
+            <p>We verified a targeted, risk-weighted sample of {vlog['sample_size']} apps — prioritizing the claims most likely to contain errors (MCP existence claims and 'blocked' verdicts) rather than a pure random sample. Exact-match accuracy was <strong>{vlog['first_pass_exact_match_accuracy']}</strong>, with directional accuracy of <strong>{vlog['directional_accuracy']}</strong>.</p>
             <p>The apps checked were: Notion, Airtable, Linear, Cloudflare, Mailchimp, Google Ads, NotebookLM, and Twenty.</p>
             <p>There were {len(vlog['corrections'])} nuanced misses corrected:</p>
             <ul>

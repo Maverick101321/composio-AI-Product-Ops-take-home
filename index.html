@@ -200,11 +200,11 @@
         <h2>Methodology: The Agent & Verification</h2>
         <div class="patterns-section" style="border-left-color: #28a745;">
             <h3>The Pipeline</h3>
-            <p>We built a multi-stage Python pipeline (<code>build_dataset.py</code> and <code>research_agent.py</code>) using the <strong>Composio SDK</strong> and the <strong>Google Antigravity Agent Framework</strong>.</p>
+            <p>Our research methodology relied on human-directed, iterative agent execution—pairing the <strong>Composio SDK</strong> for programmatic data with the <strong>Gemini CLI</strong> for qualitative research.</p>
             <ol>
-                <li><strong>Catalog Matching:</strong> First, the agent cross-referenced the 100 apps against the live Composio Toolkit catalog using <code>composio.toolkits.list()</code>. It matched 61 apps instantly, extracting their authentication schemes and base URLs.</li>
-                <li><strong>Web Research:</strong> Next, we spawned asynchronous <code>app_researcher</code> subagents using the Antigravity SDK. The agents utilized web search tools to locate specific developer documentation and extract missing data (Self-serve status, blockers, MCP availability).</li>
-                <li><strong>Human in the loop:</strong> A human was required to manually verify a random sample of the findings (e.g., confirming Binance's open-source MCP and Otter AI's enterprise-only API limit) and to resolve apps that blocked automated scraper traffic.</li>
+                <li><strong>Catalog Matching:</strong> First, a script cross-referenced the 100 apps against the live Composio Toolkit catalog using <code>composio.toolkits.list()</code>. It matched 61 apps instantly, extracting their authentication schemes and base URLs.</li>
+                <li><strong>Web Research:</strong> A human operator (acting as manager) directed the Gemini CLI through a sequence of small, scoped prompts (researching batches of 5-8 apps at a time). The agent utilized web search tools to locate specific developer documentation and extract missing qualitative data (Self-serve status, blockers, MCP availability).</li>
+                <li><strong>Human in the loop:</strong> The human operator reviewed and validated the output after every batch, issuing corrections when the agent's output was incomplete or hallucinated (e.g., rejecting bare homepages and demanding specific API documentation URLs, or catching that Mailchimp's MCP servers are community-built rather than official).</li>
             </ol>
             <h3>Accuracy Verification (Sample)</h3>
             <p>We verified 8 randomly selected apps. Exact-match accuracy was <strong>62.5%</strong>, with directional accuracy of <strong>100%</strong>.</p>
